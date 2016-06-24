@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wegotbroadsinatlanta.iml" filepath="$PROJECT_DIR$/.idea/modules/wegotbroadsinatlanta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wegotbroadsinatlanta_main.iml" filepath="$PROJECT_DIR$/.idea/modules/wegotbroadsinatlanta_main.iml" group="wegotbroadsinatlanta" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wegotbroadsinatlanta_test.iml" filepath="$PROJECT_DIR$/.idea/modules/wegotbroadsinatlanta_test.iml" group="wegotbroadsinatlanta" />
+    </modules>
+  </component>
+</project>
