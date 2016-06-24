@@ -14,10 +14,10 @@
           GridPane.columnSpan="2"/>
 
     <TextArea
-            GridPane.columnIndex="1" GridPane.rowIndex="1" id="field-green"/>
+            GridPane.columnIndex="1" GridPane.rowIndex="1" id="field-green" />
 
     <TextArea
-            GridPane.columnIndex="2" GridPane.rowIndex="1" id="field-red" editable="false"/>
+            GridPane.columnIndex="2" GridPane.rowIndex="1" id="field-red" />
 
     <Button
             GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" text="Check" prefWidth="Infinity"/>
