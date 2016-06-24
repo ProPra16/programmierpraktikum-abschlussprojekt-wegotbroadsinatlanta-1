@@ -1,19 +1,25 @@
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import java.net.URL?>
 <GridPane fx:controller="Controller" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+
+    <stylesheets>
+        <URL value="@mainstyle.css" />
+    </stylesheets>
 
     <Text text="Hello"
           GridPane.columnIndex="0" GridPane.rowIndex="0"
           GridPane.columnSpan="2"/>
 
     <TextArea
-            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            GridPane.columnIndex="1" GridPane.rowIndex="1" id="field-green"/>
 
     <TextArea
-            GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            GridPane.columnIndex="2" GridPane.rowIndex="1" id="field-red" editable="false"/>
 
+    <Button
+            GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" text="Check" prefWidth="Infinity"/>
 
 </GridPane>
