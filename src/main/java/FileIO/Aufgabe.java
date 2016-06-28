@@ -10,4 +10,5 @@ public class Aufgabe {
     String description = "";
     ArrayList<AufgabeKlasse> aufgabeklassen = new ArrayList<AufgabeKlasse>();
     ArrayList<AufgabeTest> aufgabetests = new ArrayList<AufgabeTest>();
+    Config config;
 }

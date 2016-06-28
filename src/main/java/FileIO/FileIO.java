@@ -3,6 +3,7 @@ package FileIO;
 import java.util.ArrayList;
 
 public class FileIO {
+
     public static void writeKatalog(ArrayList<Aufgabe> katalog) {
 
     }
