@@ -1,5 +1,4 @@
 package Time;
-import Time.Time;
 
 /**
  * Created by Felix Kerlin on 6/28/2016.
@@ -13,23 +12,27 @@ public class timer implements Runnable{
 
     public timer(int interval){
         timerInterval = (interval + 1) * 1000;
+        System.out.println("Creating Timer");
     }
 
     public void start(){
-        startM = Time.Milliseconds();
+        System.out.println("Starting Timer");
+        startM = timeTools.Milliseconds();
         running = true;
         timeLeft = fTimeLeft();
         if (timerThread == null) {
             timerThread = new Thread(this, "Timer");
+            timerThread.start();
         }
     }
 
     public void run(){
+        System.out.println("Running Timer");
         while (running){
             running = checkNotFinished();
             if (!running) return;
             timeLeft = fTimeLeft();
-            System.out.println(timeLeft);
+            out();
             running = checkNotFinished();
             try {
                 timerThread.sleep(1000);
@@ -40,11 +43,11 @@ public class timer implements Runnable{
     }
 
     public String fTimeLeft() {
-        return Time.msToText(fmsLeft());
+        return timeTools.msToText(fmsLeft());
     }
 
     boolean checkNotFinished(){
-        if ((Time.Milliseconds() - startM) >= timerInterval) {
+        if ((timeTools.Milliseconds() - startM) >= timerInterval) {
             reset();
             return false;
         }
@@ -52,7 +55,7 @@ public class timer implements Runnable{
     }
 
     long fmsLeft() {
-        return timerInterval - (Time.Milliseconds() - startM);
+        return timerInterval - (timeTools.Milliseconds() - startM);
     }
 
     void reset(){
@@ -62,5 +65,9 @@ public class timer implements Runnable{
             timerThread.interrupt();
             timerThread = null;
         }
+    }
+
+    void out(){
+        System.out.println(timeLeft);
     }
 }

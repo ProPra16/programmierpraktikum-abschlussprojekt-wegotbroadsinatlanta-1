@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Felix Kerlin on 6/28/2016.
  */
-public class Time {
+public class timeTools {
     public static long Milliseconds(){
         return System.currentTimeMillis();
     }

@@ -15,7 +15,8 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
 
-        ThreadedTimer.run(10);
+        timer tTimer = new timer(10);
+        tTimer.start();
     }
 
 
