@@ -1,3 +1,4 @@
+import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -10,6 +11,7 @@ import javafx.scene.control.ListView;
  * Created by Lionel on 28.06.2016.
  */
 public class LoadController {       //Design des FXML muss überarbeitet werden  ---> Ando
+    private TDDT TDDT;
     @FXML
     ListView list;
     Button but;
@@ -25,10 +27,14 @@ public class LoadController {       //Design des FXML muss überarbeitet werden 
                 System.out.println("Selected item: " + newValue);
             }
         });*/
+    }
 
+    void startmain(int task) { //Ruft Main mit Parametern auf also Auswahl der Aufgabe
+        TDDT.mainStage.show();
     }
 
     @FXML void selectTask(){
+        startmain(1);
         System.out.println(list.getSelectionModel().selectedIndexProperty().toString());     // Get Index to select a Task and start main Stage with selection
     }
 }
