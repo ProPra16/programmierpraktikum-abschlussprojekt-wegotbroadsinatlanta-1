@@ -6,5 +6,7 @@ package FileIO;
 
 // Class for the programmingtask objects
 public class Project {
+    public String code;
+    public String test;
 
 }

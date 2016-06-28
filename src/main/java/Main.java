@@ -9,7 +9,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        LoadStage LoadStage = new LoadStage();
         mainStage.setTitle("TDDT");
         mainStage.setScene(new Scene(root, 1000, 800));
         mainStage.show();
@@ -17,7 +19,9 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        launch(args);
+
+        //launch(args);
+        Application.launch(Main.class, args);
     }
-    //Mains
+
 }
