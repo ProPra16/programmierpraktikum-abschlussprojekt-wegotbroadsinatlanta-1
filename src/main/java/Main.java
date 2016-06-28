@@ -14,7 +14,7 @@ public class Main extends Application {
         LoadStage LoadStage = new LoadStage();
         mainStage.setTitle("TDDT");
         mainStage.setScene(new Scene(root, 1000, 800));
-        mainStage.show();
+       // mainStage.show();
     }
 
 
