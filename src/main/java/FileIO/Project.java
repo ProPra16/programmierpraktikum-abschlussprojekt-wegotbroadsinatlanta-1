@@ -9,4 +9,9 @@ public class Project {
     public String code;
     public String test;
 
+    public Project(String c, String t){
+        this.code = c;
+        this.test = t;
+    }
+
 }

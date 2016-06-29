@@ -1,3 +1,4 @@
+import FileIO.Project;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -11,7 +12,7 @@ import javafx.scene.control.ListView;
  * Created by Lionel on 28.06.2016.
  */
 public class LoadController {       //Design des FXML muss überarbeitet werden  ---> Ando
-    private TDDT TDDT;
+    private TDDT TDDT = new TDDT();
     @FXML
     ListView list;
     Button but;
@@ -30,7 +31,8 @@ public class LoadController {       //Design des FXML muss überarbeitet werden 
     }
 
     void startmain(int task) { //Ruft Main mit Parametern auf also Auswahl der Aufgabe
-        TDDT.mainStage.show();
+        //TDDT.mainStage.show();
+        TDDT.setTask(new Project("code ","testjunitfile"));
     }
 
     @FXML void selectTask(){
