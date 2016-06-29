@@ -8,7 +8,7 @@ root {
     -fx-shadow-highlight-color: red;
 }
 
-#field-green{
+#fieldgreen{
     -fx-text-box-border: green ;
     -fx-focus-color: green ;
     -fx-shadow-highlight-color: green;

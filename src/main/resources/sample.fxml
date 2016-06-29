@@ -3,7 +3,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.Button?>
 <?import java.net.URL?>
-<GridPane fx:controller="TDDT" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<GridPane fx:controller="TDDTController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 
     <stylesheets>
         <URL value="@mainstyle.css" />
@@ -13,13 +13,13 @@
           GridPane.columnIndex="0" GridPane.rowIndex="0"
           GridPane.columnSpan="2"/>
 
-    <TextArea
-            GridPane.columnIndex="1" GridPane.rowIndex="1" id="field-green" fx:id="fieldgreen"/>
+    <TextArea fx:id="fieldgreen"
+            GridPane.columnIndex="1" GridPane.rowIndex="1" id="fieldgreen" />
 
     <TextArea
             GridPane.columnIndex="2" GridPane.rowIndex="1" id="field-red" fx:id="fieldred"/>
 
     <Button
-            GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" text="Check" prefWidth="Infinity"/>
+            GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" text="Check" prefWidth="Infinity" onAction="#test"/>
 
 </GridPane>
