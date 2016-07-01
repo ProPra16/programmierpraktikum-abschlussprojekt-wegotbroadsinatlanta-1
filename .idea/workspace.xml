@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="706f41d0-cb40-42a6-b490-14bdef557820" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/Config.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/Config.java" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            <state relative-caret-position="225">
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -113,7 +113,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
@@ -433,6 +433,7 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/FileIO/Config.java" />
       </list>
     </option>
   </component>
@@ -978,7 +979,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467366295002</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updated permissions for gradlew">
+      <created>1467366495783</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1467366495783</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1042,7 +1050,8 @@
     <MESSAGE value="added source for multithreading" />
     <MESSAGE value="added reader / writer for fileIO" />
     <MESSAGE value="added travis for branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="added travis for branch" />
+    <MESSAGE value="updated permissions for gradlew" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated permissions for gradlew" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1218,14 +1227,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/FileIO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -1240,6 +1241,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
           <folding />
         </state>
       </provider>
