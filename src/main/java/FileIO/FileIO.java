@@ -14,19 +14,19 @@ public class FileIO {
 
     public static void writeKatalog(ArrayList<Aufgabe> katalog) {
         try {
-            ArrayList <AufgabeBlock> hallo = new ArrayList<AufgabeBlock>();
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename), "utf-8"));
-            AufgabeBlock block = new AufgabeBlock("Mineseeper", "import asdasdasd \n import asdasda\n public class sadasdasf");
-            AufgabeBlock block1 = new AufgabeBlock("Mineseeper2", "import asdasdasd \n ojojo asdasda\n public class sadasdasf");
-            AufgabeBlock block2 = new AufgabeBlock("Mineseeper3", "import hallo \n ojojo asdasda\n public class 3");
-            hallo.add(block);
-            hallo.add(block1);
-            hallo.add(block2);
-            writer.write(getXMLArray("Classes", "Class", hallo));
-
-
-            //"writer.write(getXMLStruct("class", "Minesweeper", "import static.org.junit.Assert.*;\n import org.junit.Test;\n public class Minesweeper {" +
-            //        "}}"));
+            writer.write(getTag("excercises", true));
+            for(int i=0; i < katalog.size(); i++) {
+                Aufgabe aktuelleAufgabe = katalog.get(i);
+                writer.write(getXMLOneValue("excercise", "name", aktuelleAufgabe.name, true));
+                //classes und tests
+                writer.write(getTag("config", true));
+                //babysteps
+                writer.write(getXMLOneValue("timetracking", "value", aktuelleAufgabe.config.timetracking, false));
+                writer.write(getTag("config", false));
+                writer.write(getTag("excercise", false));
+            }
+            writer.write(getTag("excercises", false));
             writer.close();
         } catch (Exception e) {
             System.out.println("FILE NOT FOUND");
@@ -50,7 +50,8 @@ public class FileIO {
     }
 
 
-    private static String getXMLOneValue(String tag, String name, String value) {
+    private static String getXMLOneValue(String tag, String name, String value, Boolean open) {
+        if(open) return "<" + tag + " " + name + "=\"" +  value + "\">\n";
         return "<" + tag + " " + name + "=\"" +  value + "\" />\n";
     }
 
@@ -64,5 +65,10 @@ public class FileIO {
             s = s + getXMLStruct(untertyp, block.get(i).name, block.get(i).preset);
         }
         return s;
+    }
+
+    private static String getTag(String tag, boolean open){
+        if (open) return "<" + tag + ">";
+        return "</" + tag + ">";
     }
 }

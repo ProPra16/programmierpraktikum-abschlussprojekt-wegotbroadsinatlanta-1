@@ -5,6 +5,6 @@ package FileIO;
  */
 public class Config {
     BabystepConfig babystep;
-    boolean timetracking;
+    String timetracking;
 
 }

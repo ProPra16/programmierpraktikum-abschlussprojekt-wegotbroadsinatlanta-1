@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="706f41d0-cb40-42a6-b490-14bdef557820" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/FileIO/AufgabeBlock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/FileIO/AufgabeKlasse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/FileIO/AufgabeTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Main.class" afterPath="$PROJECT_DIR$/build/classes/main/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/Aufgabe.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/Aufgabe.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/Config.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/Config.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,21 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileIO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FileIO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/FileIO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+            <state relative-caret-position="225">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#382#396#0" expanded="true" />
-                <element signature="e#1456#1465#0" expanded="true" />
+                <element signature="e#1333#1342#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="catalog.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="catalog.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -97,8 +90,8 @@
       <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -409,7 +402,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Time/timer.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/FileIO/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/AufgabeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/AufgabeKlasse.java" />
@@ -417,6 +409,7 @@
         <option value="$PROJECT_DIR$/catalog.txt" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/Aufgabe.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/AufgabeBlock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FileIO/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" />
       </list>
     </option>
@@ -1084,7 +1077,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467366495783</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="in FileIO write Katalog ausgebaut und methoden hinzugefügt">
+      <created>1467371780170</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1467371780170</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1149,7 +1149,8 @@
     <MESSAGE value="added reader / writer for fileIO" />
     <MESSAGE value="added travis for branch" />
     <MESSAGE value="updated permissions for gradlew" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated permissions for gradlew" />
+    <MESSAGE value="in FileIO write Katalog ausgebaut und methoden hinzugefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="in FileIO write Katalog ausgebaut und methoden hinzugefügt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1166,8 +1167,7 @@
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#396#0" expanded="true" />
-            <element signature="e#1456#1465#0" expanded="true" />
+            <element signature="e#1333#1342#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1202,8 +1202,7 @@
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#396#0" expanded="true" />
-            <element signature="e#1456#1465#0" expanded="true" />
+            <element signature="e#1333#1342#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1238,8 +1237,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#396#0" expanded="true" />
-            <element signature="e#1456#1465#0" expanded="true" />
+            <element signature="e#1333#1342#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1358,8 +1356,7 @@
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#396#0" expanded="true" />
-            <element signature="e#1456#1465#0" expanded="true" />
+            <element signature="e#1333#1342#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1378,8 +1375,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#396#0" expanded="true" />
-            <element signature="e#1456#1465#0" expanded="true" />
+            <element signature="e#1333#1342#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1502,14 +1498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1526,6 +1514,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/AufgabeBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/Aufgabe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1537,31 +1533,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/AufgabeBlock.java">
+    <entry file="file://$PROJECT_DIR$/catalog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/FileIO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+        <state relative-caret-position="225">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#396#0" expanded="true" />
-            <element signature="e#1456#1465#0" expanded="true" />
+            <element signature="e#1333#1342#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
