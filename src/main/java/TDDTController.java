@@ -18,14 +18,19 @@ public class TDDTController implements Initializable{
         fieldgreen.setText("Willkommen");
     }
 
-    //@FXML
-    public void test(){
-        fieldgreen.setText("asdjl");
-    }
-    //@FXML
-    public void setTextAreaGreen(String s){
-
+    //-----API----------------------------
+    public void setLeftTextArea(String s){
         fieldgreen.setText(s);
     }
+    public void setRightTextArea(String s){
+        fieldred.setText(s);
+    }
+    public String getLeftTextArea(){
+        return fieldgreen.getText();
+    }
+    public String getRightTextArea(){
+        return fieldred.getText();
+    }
+
 
 }

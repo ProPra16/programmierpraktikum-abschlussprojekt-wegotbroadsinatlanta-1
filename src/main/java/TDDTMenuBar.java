@@ -14,7 +14,6 @@ import java.io.IOException;
 public class TDDTMenuBar {
 
     public MenuBar TopMenu(){
-        System.out.println("init menubar");
         MenuBar mBar = new MenuBar();
         Menu ActionMenu = new Menu("Action");
         MenuItem loadTemplate = new MenuItem("Lade Template");
@@ -30,6 +29,7 @@ public class TDDTMenuBar {
     private void handlesettings(ActionEvent event){
         //Change stage to setting scene and add Layout ---> Radiobuttons
         DEBUG.out("handleloadSettings");
+        try{settingsView();}catch (IOException ex){ex.printStackTrace();}
     }
 
     private void handleloadTemplate(ActionEvent event){
@@ -41,5 +41,11 @@ public class TDDTMenuBar {
         FXMLLoader startloader = new FXMLLoader(getClass().getResource("load.fxml"));
         Parent loadroot = startloader.load();
         Main.Bp.setCenter(loadroot);
+    }
+
+    private void settingsView() throws IOException{
+        FXMLLoader settingsloader = new FXMLLoader(getClass().getResource("settings.fxml"));  // Design ----> Ando
+        Parent loadsettings = settingsloader.load();
+        Main.Bp.setCenter(loadsettings);
     }
 }
