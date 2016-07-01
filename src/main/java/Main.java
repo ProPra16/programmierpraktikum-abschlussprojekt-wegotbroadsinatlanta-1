@@ -1,3 +1,4 @@
+import FileIO.FileIO;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,6 +14,7 @@ public class Main extends Application {
         mainStage.setTitle("TDDT");
         mainStage.setScene(new Scene(root, 1000, 800));
         mainStage.show();
+        FileIO.writeKatalog(null);
     }
 
 
