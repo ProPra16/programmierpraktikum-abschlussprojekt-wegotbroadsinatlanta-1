@@ -1,21 +1,19 @@
 import FileIO.Project;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import sun.rmi.server.Activation$ActivationSystemImpl_Stub;
 
 /**
  * Created by Lionel on 28.06.2016.
  */
 public class TDDT {
     public Project Task = null;
-    public TDDTController controller = new TDDTController();
+    public Settings settinge = new Settings(true,true);
 
     public TDDT(){
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource("sample.fxml"));
-        controller = loader.getController();
     }
 
     public MenuBar TopMenu(){
@@ -23,14 +21,24 @@ public class TDDT {
         Menu ActionMenu = new Menu("Action");
         MenuItem loadTemplate = new MenuItem("Lade Template");
         loadTemplate.setOnAction(this::handleloadTemplate); ///Action bei Template laden -----> implementieren:: Lionel
-        ActionMenu.getItems().addAll(loadTemplate);
+        MenuItem settingsItem = new MenuItem("Einstellungen");
+        loadTemplate.setOnAction(this::handlesettings);
+        ActionMenu.getItems().addAll(loadTemplate,settingsItem);
         mBar.getMenus().add(ActionMenu);
         return mBar;
     }
 
-    private void handleloadTemplate(ActionEvent event){
-        controller.test();
+    private void handlesettings(ActionEvent event){
+        //Change stage to setting scene and add Layout ---> Radiobuttons
+        //Main.openSettings();
     }
+
+    private void handleloadTemplate(ActionEvent event){
+        //
+        System.out.println("DEBUG::  handleloadTemplate");
+        Main.tcontroller.setTextAreaGreen("Hallo");
+    }
+
 
     public void setTask(Project p){
         this.Task = p;
