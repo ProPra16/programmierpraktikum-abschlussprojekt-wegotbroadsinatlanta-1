@@ -22,7 +22,7 @@ public class TDDT {
         Menu ActionMenu = new Menu("Action");
         MenuItem loadTemplate = new MenuItem("Lade Template");
         loadTemplate.setOnAction(this::handleloadTemplate);///Action bei Template laden -----> implementieren:: Lionel
-        loadTemplate.setAccelerator(KeyCombination.keyCombination("Ctrl+L");  //mal testen klingt gut ;D
+       // loadTemplate.setAccelerator(KeyCombination.keyCombination("Ctrl+L");  //mal testen klingt gut ;D
         MenuItem settingsItem = new MenuItem("Einstellungen");
         loadTemplate.setOnAction(this::handlesettings);
         ActionMenu.getItems().addAll(loadTemplate,settingsItem);
