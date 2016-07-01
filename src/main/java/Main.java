@@ -1,8 +1,12 @@
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -19,7 +23,7 @@ public class Main extends Application {
         tcontroller = loader.getController();
 
         BorderPane Bp = new BorderPane();
-        Bp.setTop(tddt.TopMenu());
+        Bp.setTop(new TDDTMenuBar().TopMenu());
         Bp.setCenter(root);
         Scene mainScene = new Scene(Bp,1400,1000);
         primaryStage.setTitle("TDDT");
