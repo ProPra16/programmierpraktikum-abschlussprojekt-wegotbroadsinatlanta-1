@@ -1,8 +1,12 @@
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.input.KeyCombination;
+
+import java.io.IOException;
 
 /**
  * Created by Lionel on 01.07.2016.
@@ -15,7 +19,7 @@ public class TDDTMenuBar {
         Menu ActionMenu = new Menu("Action");
         MenuItem loadTemplate = new MenuItem("Lade Template");
         loadTemplate.setOnAction(this::handleloadTemplate);///Action bei Template laden -----> implementieren:: Lionel
-        // loadTemplate.setAccelerator(KeyCombination.keyCombination("Ctrl+L");  //mal testen klingt gut ;D
+        loadTemplate.setAccelerator(KeyCombination.keyCombination("Ctrl+L"));  //mal testen klingt gut ;D
         MenuItem settingsItem = new MenuItem("Einstellungen");
         settingsItem.setOnAction(this::handlesettings);
         ActionMenu.getItems().addAll(loadTemplate,settingsItem);
@@ -30,6 +34,12 @@ public class TDDTMenuBar {
 
     private void handleloadTemplate(ActionEvent event){
         DEBUG.out("handleloadTemplate");
-        Main.tcontroller.setTextAreaGreen("Hallo");
+        try{loadTemplateView();}catch (IOException ex){ex.printStackTrace();}
+    }
+
+    private void loadTemplateView() throws IOException{
+        FXMLLoader startloader = new FXMLLoader(getClass().getResource("load.fxml"));
+        Parent loadroot = startloader.load();
+        Main.Bp.setCenter(loadroot);
     }
 }

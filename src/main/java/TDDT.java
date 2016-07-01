@@ -1,12 +1,4 @@
 import FileIO.Project;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
-import javafx.scene.input.KeyCombination;
-import sun.rmi.server.Activation$ActivationSystemImpl_Stub;
 
 /**
  * Created by Lionel on 28.06.2016.

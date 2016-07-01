@@ -15,14 +15,14 @@ import java.io.IOException;
 public class Main extends Application {
     public Stage primaryStage = new Stage();
     public static TDDTController tcontroller;
+    public static BorderPane Bp;
     @Override
     public void start(Stage primaryStage2) throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
-        TDDT tddt = new TDDT();//loader.getController());
         Parent root = loader.load();
         tcontroller = loader.getController();
 
-        BorderPane Bp = new BorderPane();
+        Bp = new BorderPane();
         Bp.setTop(new TDDTMenuBar().TopMenu());
         Bp.setCenter(root);
         Scene mainScene = new Scene(Bp,1400,1000);
@@ -34,6 +34,12 @@ public class Main extends Application {
     public void openSettings() throws IOException {
         Scene settingScene = new Scene(FXMLLoader.load(getClass().getResource("sample.fxml")),1400,1000);
         primaryStage.setScene(settingScene);
+    }
+
+    public void loadTemplateView() throws IOException{
+        FXMLLoader startloader = new FXMLLoader(getClass().getResource("load.fxml"));
+        Parent loadroot = startloader.load();
+        Bp.setCenter(loadroot);
     }
 
     public static void main(String[] args) {  // LAUNCH Parameter
