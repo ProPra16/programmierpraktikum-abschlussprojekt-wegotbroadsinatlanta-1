@@ -7,9 +7,7 @@ import java.util.ArrayList;
 public class FileIO {
 
     private static Writer writer;
-
     private static Reader reader;
-
     private static String filename = "./catalog.txt";
 
     public static void writeKatalog(ArrayList<Aufgabe> katalog) {
@@ -19,7 +17,15 @@ public class FileIO {
             for(int i=0; i < katalog.size(); i++) {
                 Aufgabe aktuelleAufgabe = katalog.get(i);
                 writer.write(getXMLOneValue("excercise", "name", aktuelleAufgabe.name, true));
-                //classes und tests
+                writer.write(getTag("description", true));
+                writer.write(aktuelleAufgabe.description);
+                writer.write(getTag("description", false));
+                for(int j=0; j < aktuelleAufgabe.aufgabeklassen.size(); j++) {
+                    writer.write(getXMLArray("classes", "class", aktuelleAufgabe.aufgabeklassen));
+                }
+                for(int k=0; k < aktuelleAufgabe.aufgabetests.size(); k++) {
+                    writer.write(getXMLArray("tests", "test", aktuelleAufgabe.aufgabetests));
+                }
                 writer.write(getTag("config", true));
                 if(aktuelleAufgabe.config.babystep.value == "True") writer.write(getXMLWithValueAndTime("babysteps", aktuelleAufgabe.config.babystep.value, aktuelleAufgabe.config.babystep.time));
                 else writer.write(getXMLOneValue("babysteps", "value", aktuelleAufgabe.config.babystep.value, false));
@@ -65,6 +71,7 @@ public class FileIO {
         for(int i=0; i < block.size(); i ++) {
             s = s + getXMLStruct(untertyp, block.get(i).name, block.get(i).preset);
         }
+        s = s + "\n </" + typ + ">\n";
         return s;
     }
 
