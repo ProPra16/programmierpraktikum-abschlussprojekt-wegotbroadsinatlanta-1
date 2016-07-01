@@ -2,13 +2,14 @@ package Time;
 
 /**
  * Created by Felix Kerlin on 6/28/2016.
+ * Multithreading from http://www.tutorialspoint.com/java/java_multithreading.htm
  */
 public class timer implements Runnable{
-    long startM;
-    long timerInterval;
-    boolean running = false;
+    private long startM;
+    private long timerInterval;
+    private boolean running = false;
     private Thread timerThread;
-    String timeLeft;
+    private String timeLeft;
 
     public timer(int interval){
         timerInterval = (interval + 1) * 1000;
@@ -46,7 +47,7 @@ public class timer implements Runnable{
         return timeTools.msToText(fmsLeft());
     }
 
-    boolean checkNotFinished(){
+    private boolean checkNotFinished(){
         if ((timeTools.Milliseconds() - startM) >= timerInterval) {
             reset();
             return false;
@@ -54,11 +55,11 @@ public class timer implements Runnable{
         return true;
     }
 
-    long fmsLeft() {
+    private long fmsLeft() {
         return timerInterval - (timeTools.Milliseconds() - startM);
     }
 
-    void reset(){
+    private void reset(){
         startM = 0L;
         timerInterval = 0L;
         if (timerThread != null){
@@ -67,7 +68,7 @@ public class timer implements Runnable{
         }
     }
 
-    void out(){
+    private void out(){
         System.out.println(timeLeft);
     }
 }
