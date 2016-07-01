@@ -4,7 +4,7 @@
     <list default="true" id="706f41d0-cb40-42a6-b490-14bdef557820" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Main.class" afterPath="$PROJECT_DIR$/build/classes/main/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/Config.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
@@ -54,11 +54,11 @@
       <file leaf-file-name="FileIO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/FileIO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="270">
               <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1333#1342#0" expanded="true" />
+                <element signature="e#1620#1629#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,8 +100,8 @@
       <file leaf-file-name="BabystepConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -402,7 +402,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Time/timer.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/AufgabeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/AufgabeKlasse.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
@@ -410,6 +409,7 @@
         <option value="$PROJECT_DIR$/src/main/java/FileIO/Aufgabe.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/AufgabeBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" />
       </list>
     </option>
@@ -1084,7 +1084,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467371780170</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="weiterarbeiten in der FileIO">
+      <created>1467372990303</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1467372990303</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1112,7 +1119,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25360668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15337889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1150,7 +1157,8 @@
     <MESSAGE value="added travis for branch" />
     <MESSAGE value="updated permissions for gradlew" />
     <MESSAGE value="in FileIO write Katalog ausgebaut und methoden hinzugefügt" />
-    <option name="LAST_COMMIT_MESSAGE" value="in FileIO write Katalog ausgebaut und methoden hinzugefügt" />
+    <MESSAGE value="weiterarbeiten in der FileIO" />
+    <option name="LAST_COMMIT_MESSAGE" value="weiterarbeiten in der FileIO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1167,7 +1175,7 @@
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1333#1342#0" expanded="true" />
+            <element signature="e#1620#1629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1202,7 +1210,7 @@
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1333#1342#0" expanded="true" />
+            <element signature="e#1620#1629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1237,7 +1245,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1333#1342#0" expanded="true" />
+            <element signature="e#1620#1629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1356,7 +1364,7 @@
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1333#1342#0" expanded="true" />
+            <element signature="e#1620#1629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1375,7 +1383,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1333#1342#0" expanded="true" />
+            <element signature="e#1620#1629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1490,14 +1498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1549,13 +1549,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/FileIO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="270">
           <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1333#1342#0" expanded="true" />
+            <element signature="e#1620#1629#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -21,7 +21,8 @@ public class FileIO {
                 writer.write(getXMLOneValue("excercise", "name", aktuelleAufgabe.name, true));
                 //classes und tests
                 writer.write(getTag("config", true));
-                //babysteps
+                if(aktuelleAufgabe.config.babystep.value == "True") writer.write(getXMLWithValueAndTime("babysteps", aktuelleAufgabe.config.babystep.value, aktuelleAufgabe.config.babystep.time));
+                else writer.write(getXMLOneValue("babysteps", "value", aktuelleAufgabe.config.babystep.value, false));
                 writer.write(getXMLOneValue("timetracking", "value", aktuelleAufgabe.config.timetracking, false));
                 writer.write(getTag("config", false));
                 writer.write(getTag("excercise", false));
