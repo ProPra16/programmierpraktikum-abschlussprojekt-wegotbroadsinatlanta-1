@@ -13,6 +13,5 @@ public class TDDT {
     public void setTask(Project p){
         this.Task = p;
         System.out.println(p.code + p.test); //Debug Project übergabe
-        //controller.fieldgreen.setText(p.code);
     }
 }

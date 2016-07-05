@@ -14,9 +14,7 @@ public class TDDTController implements Initializable{
     private TextArea fieldred;
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        fieldgreen.setText("Willkommen");
-    }
+    public void initialize(URL url, ResourceBundle rb) {}
 
     //-----API----------------------------
     public void setLeftTextArea(String s){
