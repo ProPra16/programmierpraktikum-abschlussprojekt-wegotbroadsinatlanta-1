@@ -6,23 +6,23 @@ import java.util.ArrayList;
 public class FileIO {
 
     private static Writer writer;
-    private static Reader reader;
+    private static BufferedReader reader;
     private static String filename = "./catalog.txt";
 
     public static void writeKatalog(ArrayList<Aufgabe> katalog) {
         try {
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename), "utf-8"));
             writer.write(getTag("excercises", true));
-            for(int i=0; i < katalog.size(); i++) {
+            for(int i=0; i < 1/*katalog.size()*/; i++) {
                 Aufgabe aktuelleAufgabe = new Aufgabe();
                 writer.write(getXMLOneValue("excercise", "name", aktuelleAufgabe.name, true));
                 writer.write(getTag("description", true));
                 writer.write(aktuelleAufgabe.description);
                 writer.write(getTag("description", false));
-                for(int j=0; j < aktuelleAufgabe.aufgabeklassen.size(); j++) {
+                for(int j=0; j < 1/*aktuelleAufgabe.aufgabeklassen.size()*/; j++) {
                     writer.write(getXMLArray("classes", "class", aktuelleAufgabe.aufgabeklassen));
                 }
-                for(int k=0; k < aktuelleAufgabe.aufgabetests.size(); k++) {
+                for(int k=0; k < 1/*aktuelleAufgabe.aufgabetests.size()*/; k++) {
                     writer.write(getXMLArray("tests", "test", aktuelleAufgabe.aufgabetests));
                 }
                 writer.write(getTag("config", true));
@@ -44,6 +44,28 @@ public class FileIO {
 
         try {
             reader = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "utf-8"));
+            String line = reader.readLine();
+            StringBuilder b = new StringBuilder();
+            while (line != null) {
+                b.append(line+"\n");
+                line = reader.readLine();
+            }
+            String text = b.toString();
+
+            String[] aufgaben = text.split("<excercise name=");
+            String[] NameBabystepTimetracking = null;
+            for(int i=1; i<aufgaben.length; i++) {
+                Aufgabe aufgabe = new Aufgabe();
+                NameBabystepTimetracking = aufgaben[i].split("\"");
+                for(int j=1; j< NameBabystepTimetracking.length; j++) {
+                    if(j==1) aufgabe.name = NameBabystepTimetracking[j];
+                    if(j==3) aufgabe.config.babystep.value = NameBabystepTimetracking[j];
+                    if(j==5) aufgabe.config.timetracking = NameBabystepTimetracking[j];
+                    j++;
+                }
+                katalog.add(aufgabe);
+            }
+            System.out.print(NameBabystepTimetracking[5]);
 
         } catch (Exception e) {
             System.out.println("FILE NOT FOUND");
