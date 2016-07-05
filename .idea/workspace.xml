@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="706f41d0-cb40-42a6-b490-14bdef557820" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Fensterdeisgns/Chart.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Fensterdeisgns/Fenster3.java" afterPath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Fenster3.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
@@ -1054,7 +1051,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467723366738</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Bar chart wird erstellt für die Auswertung +++++++AndranikSar">
+      <created>1467724700408</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1467724700408</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
