@@ -15,9 +15,9 @@ public class FileIO {
             writer.write(getTag("excercises", true));
             for(int i=0; i < 1/*katalog.size()*/; i++) {
                 Aufgabe aktuelleAufgabe = new Aufgabe();
-                writer.write(getXMLOneValue("excercise", "name", aktuelleAufgabe.name, true));
+                writer.write(getXMLOneValue("excercise", "name", "ando"/*aktuelleAufgabe.name*/, true));
                 writer.write(getTag("description", true));
-                writer.write(aktuelleAufgabe.description);
+                writer.write("teste description"/*aktuelleAufgabe.description*/);
                 writer.write(getTag("description", false));
                 for(int j=0; j < 1/*aktuelleAufgabe.aufgabeklassen.size()*/; j++) {
                     writer.write(getXMLArray("classes", "class", aktuelleAufgabe.aufgabeklassen));
@@ -27,8 +27,8 @@ public class FileIO {
                 }
                 writer.write(getTag("config", true));
                 if(aktuelleAufgabe.config.babystep.value == "True") writer.write(getXMLWithValueAndTime("babysteps", aktuelleAufgabe.config.babystep.value, aktuelleAufgabe.config.babystep.time));
-                else writer.write(getXMLOneValue("babysteps", "value", aktuelleAufgabe.config.babystep.value, false));
-                writer.write(getXMLOneValue("timetracking", "value", aktuelleAufgabe.config.timetracking, false));
+                else writer.write(getXMLOneValue("babysteps", "value", "true"/*aktuelleAufgabe.config.babystep.value*/, false));
+                writer.write(getXMLOneValue("timetracking", "value", "yeah"/*aktuelleAufgabe.config.timetracking*/, false));
                 writer.write(getTag("config", false));
                 writer.write(getTag("excercise", false));
             }
@@ -54,9 +54,14 @@ public class FileIO {
 
             String[] aufgaben = text.split("<excercise name=");
             String[] NameBabystepTimetracking = null;
+            String[] descriptionpre = null;
+            String[] description = null;
             for(int i=1; i<aufgaben.length; i++) {
                 Aufgabe aufgabe = new Aufgabe();
                 NameBabystepTimetracking = aufgaben[i].split("\"");
+                descriptionpre = aufgaben[i].split("<description>");
+                description = descriptionpre[1].split("</description>");
+                aufgabe.description = description[0];
                 for(int j=1; j< NameBabystepTimetracking.length; j++) {
                     if(j==1) aufgabe.name = NameBabystepTimetracking[j];
                     if(j==3) aufgabe.config.babystep.value = NameBabystepTimetracking[j];
@@ -65,7 +70,7 @@ public class FileIO {
                 }
                 katalog.add(aufgabe);
             }
-            System.out.print(NameBabystepTimetracking[5]);
+            System.out.println(katalog.get(0).name + katalog.get(0).config.timetracking + katalog.get(0).config.babystep.value + katalog.get(0).description);
 
         } catch (Exception e) {
             System.out.println("FILE NOT FOUND");
