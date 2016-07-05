@@ -1,5 +1,4 @@
 package FileIO;
-
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ public class FileIO {
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename), "utf-8"));
             writer.write(getTag("excercises", true));
             for(int i=0; i < katalog.size(); i++) {
-                Aufgabe aktuelleAufgabe = katalog.get(i);
+                Aufgabe aktuelleAufgabe = new Aufgabe();
                 writer.write(getXMLOneValue("excercise", "name", aktuelleAufgabe.name, true));
                 writer.write(getTag("description", true));
                 writer.write(aktuelleAufgabe.description);
@@ -45,6 +44,7 @@ public class FileIO {
 
         try {
             reader = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "utf-8"));
+
         } catch (Exception e) {
             System.out.println("FILE NOT FOUND");
         }
@@ -76,7 +76,7 @@ public class FileIO {
     }
 
     private static String getTag(String tag, boolean open){
-        if (open) return "<" + tag + ">";
-        return "</" + tag + ">";
+        if (open) return "<" + tag + ">\n";
+        return "</" + tag + ">\n";
     }
 }

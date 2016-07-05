@@ -10,6 +10,6 @@ public class Aufgabe {
     String description = "";
     ArrayList<AufgabeBlock> aufgabeklassen = new ArrayList<AufgabeBlock>();
     ArrayList<AufgabeBlock> aufgabetests = new ArrayList<AufgabeBlock>();
-    Config config;
+    Config config = new Config();
 
 }
