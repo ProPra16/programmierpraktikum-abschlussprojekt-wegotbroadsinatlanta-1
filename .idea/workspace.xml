@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="706f41d0-cb40-42a6-b490-14bdef557820" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Fensterdeisgns/Chart.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/load.fxml" afterPath="$PROJECT_DIR$/build/resources/main/load.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Fensterdeisgns/Fenster3.java" afterPath="$PROJECT_DIR$/src/main/java/Fensterdeisgns/Fenster3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TDDTController.java" afterPath="$PROJECT_DIR$/src/main/java/TDDTController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Fensterdeisgns/Chart.java" afterPath="$PROJECT_DIR$/src/main/java/Fensterdeisgns/Chart.java" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +59,8 @@
       <file leaf-file-name="Chart.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdeisgns/Chart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+            <state relative-caret-position="452">
+              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#455#456#0" expanded="true" />
@@ -1031,7 +1029,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467719940323</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Bar chart wird erstellt für die Auswertung +++++++AndranikSar">
+      <created>1467723346917</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1467723346917</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1131,7 +1136,8 @@
     <MESSAGE value="Added Template Scene change" />
     <MESSAGE value="Added API ++++++++++++ AndranikSar" />
     <MESSAGE value="Fenster 3 wird erstellt und bearbeitet +++++++AndranikSar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fenster 3 wird erstellt und bearbeitet +++++++AndranikSar" />
+    <MESSAGE value="Bar chart wird erstellt für die Auswertung +++++++AndranikSar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bar chart wird erstellt für die Auswertung +++++++AndranikSar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1576,8 +1582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdeisgns/Chart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+        <state relative-caret-position="452">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#455#456#0" expanded="true" />

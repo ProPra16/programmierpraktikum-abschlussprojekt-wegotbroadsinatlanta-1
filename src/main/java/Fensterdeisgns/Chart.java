@@ -32,7 +32,7 @@ public class Chart extends Application {
         prozent.setLabel("Prozent");
 
         Scene scene  = new Scene(bc,800,600);
-        bc.getData().addAll(schritt1, schritt2, schritt3);
+      //  bc.getData().addAll(schritt1, schritt2, schritt3);
         stage.setScene(scene);
         stage.show();
     }
