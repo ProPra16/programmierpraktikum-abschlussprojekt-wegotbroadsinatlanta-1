@@ -57,7 +57,11 @@ public class Chart extends Application {
         schritt3.getData().add(new XYChart.Data(red, 30));
         schritt3.getData().add(new XYChart.Data(green, 35));
         schritt3.getData().add(new XYChart.Data(refactory, 35));
+////////////////////////////////////////////////////////////////////////////////////
 
+        for(int i = 0; i<array.length; i++){
+            XYChart.Series Schritt+i =+ add
+        }
         Scene scene  = new Scene(information,800,600);
         information.getData().addAll(schritt1, schritt2, schritt3);
         stage.setScene(scene);

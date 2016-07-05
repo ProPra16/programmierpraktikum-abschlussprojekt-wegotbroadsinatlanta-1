@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="706f41d0-cb40-42a6-b490-14bdef557820" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java" afterPath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +58,8 @@
       <file leaf-file-name="Chart.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            <state relative-caret-position="657">
+              <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#517#518#0" expanded="true" />
@@ -1058,7 +1059,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467724700408</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Balken hinzugefügt und Einteilung verbessert +++++++AndranikSar">
+      <created>1467724740280</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1467724740280</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1159,7 +1167,8 @@
     <MESSAGE value="Added API ++++++++++++ AndranikSar" />
     <MESSAGE value="Fenster 3 wird erstellt und bearbeitet +++++++AndranikSar" />
     <MESSAGE value="Bar chart wird erstellt für die Auswertung +++++++AndranikSar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bar chart wird erstellt für die Auswertung +++++++AndranikSar" />
+    <MESSAGE value="Balken hinzugefügt und Einteilung verbessert +++++++AndranikSar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Balken hinzugefügt und Einteilung verbessert +++++++AndranikSar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1604,8 +1613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        <state relative-caret-position="657">
+          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#517#518#0" expanded="true" />
