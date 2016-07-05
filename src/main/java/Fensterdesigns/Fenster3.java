@@ -1,4 +1,4 @@
-package Fensterdeisgns;
+package Fensterdesigns;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
