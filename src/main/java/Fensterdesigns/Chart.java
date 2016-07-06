@@ -1,5 +1,6 @@
 package Fensterdesigns;
 
+/*
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
@@ -59,12 +60,58 @@ public class Chart extends Application {
         schritt3.getData().add(new XYChart.Data(refactory, 35));
 ////////////////////////////////////////////////////////////////////////////////////
 
-        for(int i = 0; i<array.length; i++){
-            XYChart.Series Schritt+i =+ add
+            for(int i = 0; i<array.length; i++){
+                XYChart.Series Schritt+i =+ add
         }
         Scene scene  = new Scene(information,800,600);
         information.getData().addAll(schritt1, schritt2, schritt3);
         stage.setScene(scene);
         stage.show();
+    }
+}*/
+
+import java.util.Arrays;
+import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.StackedBarChart;
+import javafx.scene.chart.XYChart;
+import javafx.stage.Stage;
+
+public class Chart extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+    @Override
+    public void start(Stage primaryStage) {
+        Group root = new Group();
+
+        final CategoryAxis xAxis = new CategoryAxis();
+        final NumberAxis yAxis = new NumberAxis();
+
+        xAxis.setLabel("Schritt");
+        xAxis.setCategories(FXCollections.<String> observableArrayList(Arrays.asList(
+                "1",
+                "2",
+                "3")));
+        yAxis.setLabel("Value");
+
+        final StackedBarChart<String,Number> stackedBarChart = new StackedBarChart<String,Number>(xAxis,yAxis);
+        stackedBarChart.setTitle("StackedBarChart");
+
+        XYChart.Series<String,Number> series1 = new XYChart.Series();
+        series1.setName("Green");
+
+        series1.getData().add(new XYChart.Data("Red", 20));
+        series1.getData().add(new XYChart.Data("Green", 30));
+        series1.getData().add(new XYChart.Data("Refactory", 50));
+
+        XYChart.Series<String,Number> series2 = new XYChart.Series();
+        series2.setName("Red");
+
     }
 }
