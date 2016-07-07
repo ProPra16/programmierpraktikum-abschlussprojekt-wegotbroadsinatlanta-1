@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="706f41d0-cb40-42a6-b490-14bdef557820" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Fensterdesigns/GetZeit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Zeiteinteilung.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Fensterdesigns/GetZeit.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java" afterPath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Zeiteinteilung.java" afterPath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Zeiteinteilung.java" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,33 +45,21 @@
       <file leaf-file-name="Chart.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
+            <state relative-caret-position="563">
               <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#689#704#0" expanded="true" />
-                <element signature="e#1810#1811#0" expanded="true" />
-                <element signature="e#1838#1839#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Zeiteinteilung.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Zeiteinteilung.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Zeiteinteilung.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetZeit.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/GetZeit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="519">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,7 +70,7 @@
       <file leaf-file-name="Fenster3.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Fenster3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
+            <state relative-caret-position="484">
               <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -394,8 +381,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Fensterdeisgns/Chart.java" />
         <option value="$PROJECT_DIR$/src/main/java/Fensterdesigns/Fenster3.java" />
         <option value="$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Fensterdesigns/Zeiteinteilung.java" />
         <option value="$PROJECT_DIR$/src/main/java/Fensterdesigns/GetZeit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Fensterdesigns/Zeiteinteilung.java" />
       </list>
     </option>
   </component>
@@ -1102,7 +1089,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467817735928</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Datentypen erstellt und neues Fenster für eine extraausgabe der zeit+++++++AndranikSar">
+      <created>1467885459052</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1467885459052</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1206,7 +1200,9 @@
     <MESSAGE value="Balken hinzugefügt und Einteilung verbessert +++++++AndranikSar" />
     <MESSAGE value="Automatisierung+++++++AndranikSar" />
     <MESSAGE value="Neue Variante zur Darstellung; nur Probe; muss mit Mitgliedern besprochen werden+++++++AndranikSar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Neue Variante zur Darstellung; nur Probe; muss mit Mitgliedern besprochen werden+++++++AndranikSar" />
+    <MESSAGE value="Datentypen erstellt und neues Fenster für eine extraausgabe der zeit+++++++AndranikSar" />
+    <MESSAGE value="Datentypen erstellt und neues Fenster für eine extraausgabe der zeit, neue Fenster für die zeitausgabe+++++++AndranikSar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Datentypen erstellt und neues Fenster für eine extraausgabe der zeit, neue Fenster für die zeitausgabe+++++++AndranikSar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1597,9 +1593,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/GetZeit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Fenster3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="484">
           <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1609,29 +1613,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
+        <state relative-caret-position="563">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#689#704#0" expanded="true" />
-            <element signature="e#1810#1811#0" expanded="true" />
-            <element signature="e#1838#1839#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Zeiteinteilung.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/GetZeit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="519">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

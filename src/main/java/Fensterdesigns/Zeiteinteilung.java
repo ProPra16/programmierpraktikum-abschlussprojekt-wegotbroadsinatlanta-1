@@ -1,13 +1,17 @@
 package Fensterdesigns;
 
+import javafx.application.Application;
+import javafx.scene.control.Alert;
+import javafx.stage.Stage;
+
 /**
  * Created by Ando Mando on 07.07.2016.
  */
-public class Zeiteinteilung {
-    private String bereich;
-    private long startZeit;
-    private long endZeit;
-    private long differenz;
+public class Zeiteinteilung extends Application{
+    String bereich;
+    long startZeit;
+    long endZeit;
+    long differenz;
 
     public void Zeiteinteilung(String bereich, long startZeit, long endZeit){
         this.bereich = bereich;
@@ -21,5 +25,15 @@ public class Zeiteinteilung {
     public void getzeit(){
 
     }
+
+    @Override
+    public void start(Stage primarystage){
+
+        primarystage.setTitle("Zeit");
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Deine Zeit");
+        alert.setHeaderText("Du hast insgesamt " + differenz + " Sekunden benötigt.");
+        alert.show();
+        }
 
 }
