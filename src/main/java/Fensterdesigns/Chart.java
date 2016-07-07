@@ -1,6 +1,5 @@
 package Fensterdesigns;
 
-/*
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
@@ -10,108 +9,49 @@ import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
 public class Chart extends Application {
-    String red = "Schritt 1";
-    String green = "Schritt 2";
-    String refactory = "Schritt 3";
+    final static String eins = "1";
+    final static String zwei = "2";
+    final static String drei = "3";
 
+    @Override public void start(Stage stage) {
+        stage.setTitle("Begutachtung der Entwicklungsschritte");
 
-    ////////////////////////////////////////////77TEST_AUFÜHRUNG
-    public static void main(String[] args) {
-        launch(args);
-    }
+        final CategoryAxis x = new CategoryAxis();
+        final NumberAxis y = new NumberAxis();
 
-    @Override
-    public void start(Stage stage) {
-            barchart(stage);
-    }
-    ///////////////////////////////////////////TEST-AUSFÜHRUNG
-    public void barchart(Stage stage){
+        final BarChart<String,Number> values = new BarChart<String,Number>(x,y);
 
-        //Array als Parameter
-        //Schritte automatisieren
+        values.setTitle("Zeiteinteilung pro Bereich");
 
+        x.setLabel("Bereich");
+        y.setLabel("Prozent");
 
-        stage.setTitle("Auswertung der Entwicklung");
+        XYChart.Series ser1 = new XYChart.Series();
+        ser1.setName("Red");
+        ser1.getData().add(new XYChart.Data(eins, 35.1));
+        ser1.getData().add(new XYChart.Data(zwei, 40.0));
+        ser1.getData().add(new XYChart.Data(drei, 20.0));
 
-        CategoryAxis bereich = new CategoryAxis();
-        NumberAxis prozent = new NumberAxis();
+        XYChart.Series ser2 = new XYChart.Series();
+        ser2.setName("Green");
+        ser2.getData().add(new XYChart.Data(eins, 34.9));
+        ser2.getData().add(new XYChart.Data(zwei, 20.0));
+        ser2.getData().add(new XYChart.Data(drei, 20.0));
 
-        BarChart<String,Number> information = new BarChart<String,Number>(bereich, prozent);
-        information.setTitle("Einteilung der Zeit und die Anzahl der Wechsel für den jeweiligen Bereich");
-        bereich.setLabel("Bereich");
-        prozent.setLabel("Prozent");
+        XYChart.Series ser3 = new XYChart.Series();
+        ser3.setName("Refactor");
+        ser3.getData().add(new XYChart.Data(eins, 30.0));
+        ser3.getData().add(new XYChart.Data(zwei, 40.0));
+        ser3.getData().add(new XYChart.Data(drei, 60.0));
 
-         XYChart.Series schritt1 = new XYChart.Series();
-        schritt1.setName("Red");
-        schritt1.getData().add(new XYChart.Data(red, 20));
-        schritt1.getData().add(new XYChart.Data(green, 20));
-        schritt1.getData().add(new XYChart.Data(refactory, 60));
-
-        XYChart.Series schritt2 = new XYChart.Series();
-        schritt2.setName("Green");
-        schritt2.getData().add(new XYChart.Data(red, 40));
-        schritt2.getData().add(new XYChart.Data(green, 10));
-        schritt2.getData().add(new XYChart.Data(refactory, 50));
-
-        XYChart.Series schritt3 = new XYChart.Series();
-        schritt3.setName("Refactory");
-        schritt3.getData().add(new XYChart.Data(red, 30));
-        schritt3.getData().add(new XYChart.Data(green, 35));
-        schritt3.getData().add(new XYChart.Data(refactory, 35));
-////////////////////////////////////////////////////////////////////////////////////
-
-            for(int i = 0; i<array.length; i++){
-                XYChart.Series Schritt+i =+ add
-        }
-        Scene scene  = new Scene(information,800,600);
-        information.getData().addAll(schritt1, schritt2, schritt3);
+        Scene scene  = new Scene(values,800,600);
+        values.getData().addAll(ser1, ser2, ser3);
         stage.setScene(scene);
         stage.show();
     }
-}*/
-
-import java.util.Arrays;
-import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.StackedBarChart;
-import javafx.scene.chart.XYChart;
-import javafx.stage.Stage;
-
-public class Chart extends Application {
 
     public static void main(String[] args) {
         launch(args);
     }
-    @Override
-    public void start(Stage primaryStage) {
-        Group root = new Group();
 
-        final CategoryAxis xAxis = new CategoryAxis();
-        final NumberAxis yAxis = new NumberAxis();
-
-        xAxis.setLabel("Schritt");
-        xAxis.setCategories(FXCollections.<String> observableArrayList(Arrays.asList(
-                "1",
-                "2",
-                "3")));
-        yAxis.setLabel("Value");
-
-        final StackedBarChart<String,Number> stackedBarChart = new StackedBarChart<String,Number>(xAxis,yAxis);
-        stackedBarChart.setTitle("StackedBarChart");
-
-        XYChart.Series<String,Number> series1 = new XYChart.Series();
-        series1.setName("Green");
-
-        series1.getData().add(new XYChart.Data("Red", 20));
-        series1.getData().add(new XYChart.Data("Green", 30));
-        series1.getData().add(new XYChart.Data("Refactory", 50));
-
-        XYChart.Series<String,Number> series2 = new XYChart.Series();
-        series2.setName("Red");
-
-    }
 }
