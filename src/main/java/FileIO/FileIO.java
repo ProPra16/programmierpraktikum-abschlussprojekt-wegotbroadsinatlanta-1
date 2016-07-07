@@ -72,8 +72,12 @@ public class FileIO {
             String[] description = null;
             String[] aufgabenblocknamenpre = null;
             String[] aufgabenblocknamen = null;
+            String[] aufgabenblockprepre = null;
+            String[] aufgabenblockpre = null;
             String[] aufgabenblocktestnamenpre = null;
             String[] aufgabenblocktestnamen = null;
+            String[] aufgabenblocktestprepre= null;
+            String[] aufgabenblocktestpre = null;
             for(int i=1; i<aufgaben.length; i++) {
                 Aufgabe aufgabe = new Aufgabe();
                 NameBabystepTimetracking = aufgaben[i].split("\"");
@@ -82,18 +86,24 @@ public class FileIO {
                 aufgabe.description = description[0];
                 aufgabenblocknamenpre = aufgaben[i].split("<class name=\"");
                 aufgabenblocktestnamenpre = aufgaben[i].split("<test name=\"");
+                aufgabenblocktestprepre = aufgaben[i].split("import org.junit.Test;");
+                aufgabenblockprepre = aufgaben[i].split("\">\n" + "p");
                 for(int l=1; l<aufgabenblocktestnamenpre.length; l++) {
                     aufgabenblocktestnamen = aufgabenblocktestnamenpre[l].split("\">\n" + "import");
+                    aufgabenblocktestpre = aufgabenblocktestprepre[l].split("</test>");
                     AufgabeBlock blocktest = new AufgabeBlock(null,null);
                     aufgabe.aufgabetests.add(blocktest);
                     aufgabe.aufgabetests.get(l-1).name = aufgabenblocktestnamen[0];
+                    aufgabe.aufgabetests.get(l-1).preset = "import static org.junit.Assert.*;\n" + "import org.junit.Test;\n" + aufgabenblocktestpre[0];
 
                 }
                 for(int k=1; k<aufgabenblocknamenpre.length; k++) {
                     aufgabenblocknamen = aufgabenblocknamenpre[k].split("\">\n" + "public");
+                    aufgabenblockpre = aufgabenblockprepre[k].split("</class>");
                     AufgabeBlock block = new AufgabeBlock(null, null);
                     aufgabe.aufgabeklassen.add(block);
                     aufgabe.aufgabeklassen.get(k-1).name = aufgabenblocknamen[0];
+                    aufgabe.aufgabeklassen.get(k-1).preset = "p" + aufgabenblockpre[0];
 
 
                 }
@@ -105,7 +115,7 @@ public class FileIO {
                 }
                 katalog.add(aufgabe);
             }
-            System.out.println(katalog.get(0).name + katalog.get(0).config.timetracking + katalog.get(0).config.babystep.value + katalog.get(0).description + katalog.get(0).aufgabeklassen.get(0).name + katalog.get(0).aufgabeklassen.get(0).preset + katalog.get(0).aufgabetests.get(0).name + katalog.get(0).aufgabetests.get(0).preset);
+            System.out.println(katalog.get(0).aufgabeklassen.get(0).name + katalog.get(0).aufgabeklassen.get(0).preset);
 
         } catch (Exception e) {
             e.printStackTrace();
