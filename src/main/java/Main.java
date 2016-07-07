@@ -17,6 +17,7 @@ public class Main extends Application {
     public static Main self;
     public static int width = 1400;
     public static int heigth = 1000;
+    public StatusBar statusBar;
     @Override
     public void start(Stage primaryStage2) throws Exception{
         DEBUG.out("Launch Application");
@@ -28,7 +29,7 @@ public class Main extends Application {
         Bp = new BorderPane();
         Bp.setTop(new TDDTMenuBar().TopMenu());
         Bp.setCenter(root);
-        StatusBar statusBar = new StatusBar();
+        statusBar = new StatusBar();
         Bp.setBottom(statusBar);
         Scene mainScene = new Scene(Bp,width,heigth);
         primaryStage.setTitle("TDDT");

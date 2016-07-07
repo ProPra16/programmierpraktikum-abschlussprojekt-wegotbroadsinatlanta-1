@@ -6,6 +6,8 @@ import vk.core.api.*;
 public class Compile {  // Verknüpft mit API KATA von Bendisposto
     String outmessage = "";
     public Compile(Project Proj){
+        DEBUG.out("Starting Compiler");
+        Main.self.statusBar.output.setText("Starting Compiler...");
         CompilationUnit code = new CompilationUnit(Proj.getClassName(TDDT.currenttask),Main.tcontroller.getLeftTextArea(),false);
         CompilationUnit test = new CompilationUnit(Proj.getTestName(TDDT.currenttask),Main.tcontroller.getRightTextArea(),true);
 
