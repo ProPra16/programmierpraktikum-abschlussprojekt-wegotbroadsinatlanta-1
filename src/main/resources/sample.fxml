@@ -3,6 +3,8 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.Button?>
 <?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <GridPane fx:controller="TDDTController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 
     <stylesheets>
@@ -20,6 +22,7 @@
             GridPane.columnIndex="2" GridPane.rowIndex="1" id="field-red" fx:id="fieldred"/>
 
     <Button
-            GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" text="Check" prefWidth="Infinity" />
+            fx:id="runbutton" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" prefWidth="Infinity" Text="Run" onAction="#run">
+        </Button>
 
 </GridPane>

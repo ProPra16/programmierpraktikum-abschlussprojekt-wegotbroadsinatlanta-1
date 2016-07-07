@@ -1,3 +1,4 @@
+import FileIO.Project;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
@@ -14,7 +15,14 @@ public class TDDTController implements Initializable{
     private TextArea fieldred;
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) {}
+    public void initialize(URL url, ResourceBundle rb) {
+
+    }
+
+    public void run(){
+        Main.self.playSound();
+        Compile com = new Compile(new Project("sda","adsk"));
+    }
 
     //-----API----------------------------
     public void setLeftTextArea(String s){

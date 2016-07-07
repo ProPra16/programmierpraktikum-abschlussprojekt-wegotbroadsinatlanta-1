@@ -11,17 +11,31 @@ public class Project {
 
     public String getClassName(int i){
         //returns class;
-        return "0";
+        return "convert()";
     }
 
     public String getTestName(int i){
         //returns test;
-        return "0";
+        return "aTest()";
     }
 
     public Project(String c, String t){
-        this.code = c;
-        this.test = t;
+        this.code = "public class TestCode{\n" +
+                "            public static String convert(){\n" +
+                "            return null;\n" +
+                "            }\n" +
+                "            }";
+        this.test = "import static org.junit.Assert.*;\n" +
+                "            import org.junit.Test;\n" +
+                "\n" +
+                "            public class TestTest{\n" +
+                "\n" +
+                "            @Test\n" +
+                "            public void aTest(){\n" +
+                "            assertEquals(null,TestCode.convert());\n" +
+                "            }\n" +
+                "\n" +
+                "            }";
     }
 
 }

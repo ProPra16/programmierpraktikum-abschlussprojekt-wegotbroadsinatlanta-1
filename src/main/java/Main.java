@@ -14,21 +14,27 @@ public class Main extends Application {
     public Stage primaryStage = new Stage();
     public static TDDTController tcontroller;
     public static BorderPane Bp;
+    public static Main self;
+    public static int width = 1400;
+    public static int heigth = 1000;
     @Override
     public void start(Stage primaryStage2) throws Exception{
         DEBUG.out("Launch Application");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
         Parent root = loader.load();
         tcontroller = loader.getController();
-        playSound();
+
 
         Bp = new BorderPane();
         Bp.setTop(new TDDTMenuBar().TopMenu());
         Bp.setCenter(root);
-        Scene mainScene = new Scene(Bp,1400,1000);
+        StatusBar statusBar = new StatusBar();
+        Bp.setBottom(statusBar);
+        Scene mainScene = new Scene(Bp,width,heigth);
         primaryStage.setTitle("TDDT");
         primaryStage.setScene(mainScene);
         primaryStage.show();
+        self = this;
     }
 
     public static void main(String[] args) {  // LAUNCH Parameter
