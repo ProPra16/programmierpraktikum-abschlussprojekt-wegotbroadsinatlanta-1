@@ -9,6 +9,16 @@ public class Project {
     public String code;
     public String test;
 
+    public String getClassName(int i){
+        //returns class;
+        return "0";
+    }
+
+    public String getTestName(int i){
+        //returns test;
+        return "0";
+    }
+
     public Project(String c, String t){
         this.code = c;
         this.test = t;

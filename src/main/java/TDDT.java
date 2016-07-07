@@ -1,8 +1,6 @@
 import FileIO.Project;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-
 import java.io.IOException;
 
 /**
@@ -11,7 +9,7 @@ import java.io.IOException;
 public class TDDT {
     public Project Task = null;
     public Settings settings = new Settings(true,true);
-
+    public static int currenttask;
     public TDDT(){
     }
 
@@ -26,5 +24,29 @@ public class TDDT {
             tcontroller.setLeftTextArea(p.code);
             tcontroller.setRightTextArea(p.test);
         }catch (IOException ex){ex.printStackTrace();}
+    }
+
+    public String getCode(){
+        String s ="";
+        try{
+            FXMLLoader mainloader = new FXMLLoader(getClass().getResource("sample.fxml"));
+            Parent mainparent = mainloader.load();
+            Main.Bp.setCenter(mainparent);
+            TDDTController tcontroller = mainloader.getController();
+            s = tcontroller.getLeftTextArea();
+        }catch (IOException ex){ex.printStackTrace();}
+        return s;
+    }
+
+    public String getTest(){
+        String s ="";
+        try{
+            FXMLLoader mainloader = new FXMLLoader(getClass().getResource("sample.fxml"));
+            Parent mainparent = mainloader.load();
+            Main.Bp.setCenter(mainparent);
+            TDDTController tcontroller = mainloader.getController();
+            s = tcontroller.getRightTextArea();
+        }catch (IOException ex){ex.printStackTrace();}
+        return s;
     }
 }
