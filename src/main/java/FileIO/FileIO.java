@@ -15,6 +15,10 @@ public class FileIO {
             writer.write(getTag("excercises", true));
             for(int i=0; i < 1/*katalog.size()*/; i++) {
                 Aufgabe aktuelleAufgabe = new Aufgabe();
+                //test code
+                AufgabeBlock a = new AufgabeBlock("hallo welt", "public");
+                aktuelleAufgabe.aufgabeklassen.add(a);
+                //bis hier
                 writer.write(getXMLOneValue("excercise", "name", "ando"/*aktuelleAufgabe.name*/, true));
                 writer.write(getTag("description", true));
                 writer.write("teste description"/*aktuelleAufgabe.description*/);
@@ -56,12 +60,19 @@ public class FileIO {
             String[] NameBabystepTimetracking = null;
             String[] descriptionpre = null;
             String[] description = null;
+            String[] aufgabenblocknamenpre = null;
+            String[] aufgabenblocknamen = null;
             for(int i=1; i<aufgaben.length; i++) {
                 Aufgabe aufgabe = new Aufgabe();
                 NameBabystepTimetracking = aufgaben[i].split("\"");
                 descriptionpre = aufgaben[i].split("<description>");
                 description = descriptionpre[1].split("</description>");
                 aufgabe.description = description[0];
+                aufgabenblocknamenpre = aufgaben[i].split("<class name=\"");
+                for(int k=1; k<aufgabenblocknamenpre.length; k++) {
+                    aufgabenblocknamen = aufgabenblocknamenpre[k].split("\">\n" + "public");
+                    aufgabe.aufgabeklassen.get(k-1).name = aufgabenblocknamen[0];
+                }
                 for(int j=1; j< NameBabystepTimetracking.length; j++) {
                     if(j==1) aufgabe.name = NameBabystepTimetracking[j];
                     if(j==3) aufgabe.config.babystep.value = NameBabystepTimetracking[j];
@@ -70,7 +81,7 @@ public class FileIO {
                 }
                 katalog.add(aufgabe);
             }
-            System.out.println(katalog.get(0).name + katalog.get(0).config.timetracking + katalog.get(0).config.babystep.value + katalog.get(0).description);
+            System.out.println(katalog.get(0).name + katalog.get(0).config.timetracking + katalog.get(0).config.babystep.value + katalog.get(0).description + katalog.get(0).aufgabeklassen.get(0).name + katalog.get(0).aufgabeklassen.get(0).preset);
 
         } catch (Exception e) {
             System.out.println("FILE NOT FOUND");
