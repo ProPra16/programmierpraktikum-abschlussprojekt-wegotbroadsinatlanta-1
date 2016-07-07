@@ -16,8 +16,18 @@ public class FileIO {
             for(int i=0; i < 1/*katalog.size()*/; i++) {
                 Aufgabe aktuelleAufgabe = new Aufgabe();
                 //test code
-                AufgabeBlock a = new AufgabeBlock("hallo welt", "public");
+                AufgabeBlock a = new AufgabeBlock("hallo welt", "public class RomanNumberConverter {\n" +
+                        "}");
                 aktuelleAufgabe.aufgabeklassen.add(a);
+                AufgabeBlock test = new AufgabeBlock("test yeah", "import static org.junit.Assert.*;\n" +
+                        "import org.junit.Test;\n" +
+                        "public class RomanNumbersTest {\n" +
+                        "@Test\n" +
+                        "public void testSomething() {\n" +
+                        "}\n" +
+                        "}");
+                aktuelleAufgabe.aufgabetests.add(test);
+
                 //bis hier
                 writer.write(getXMLOneValue("excercise", "name", "ando"/*aktuelleAufgabe.name*/, true));
                 writer.write(getTag("description", true));
@@ -62,6 +72,8 @@ public class FileIO {
             String[] description = null;
             String[] aufgabenblocknamenpre = null;
             String[] aufgabenblocknamen = null;
+            String[] aufgabenblocktestnamenpre = null;
+            String[] aufgabenblocktestnamen = null;
             for(int i=1; i<aufgaben.length; i++) {
                 Aufgabe aufgabe = new Aufgabe();
                 NameBabystepTimetracking = aufgaben[i].split("\"");
@@ -69,9 +81,21 @@ public class FileIO {
                 description = descriptionpre[1].split("</description>");
                 aufgabe.description = description[0];
                 aufgabenblocknamenpre = aufgaben[i].split("<class name=\"");
+                aufgabenblocktestnamenpre = aufgaben[i].split("<test name=\"");
+                for(int l=1; l<aufgabenblocktestnamenpre.length; l++) {
+                    aufgabenblocktestnamen = aufgabenblocktestnamenpre[l].split("\">\n" + "import");
+                    AufgabeBlock blocktest = new AufgabeBlock(null,null);
+                    aufgabe.aufgabetests.add(blocktest);
+                    aufgabe.aufgabetests.get(l-1).name = aufgabenblocktestnamen[0];
+
+                }
                 for(int k=1; k<aufgabenblocknamenpre.length; k++) {
                     aufgabenblocknamen = aufgabenblocknamenpre[k].split("\">\n" + "public");
+                    AufgabeBlock block = new AufgabeBlock(null, null);
+                    aufgabe.aufgabeklassen.add(block);
                     aufgabe.aufgabeklassen.get(k-1).name = aufgabenblocknamen[0];
+
+
                 }
                 for(int j=1; j< NameBabystepTimetracking.length; j++) {
                     if(j==1) aufgabe.name = NameBabystepTimetracking[j];
@@ -81,9 +105,10 @@ public class FileIO {
                 }
                 katalog.add(aufgabe);
             }
-            System.out.println(katalog.get(0).name + katalog.get(0).config.timetracking + katalog.get(0).config.babystep.value + katalog.get(0).description + katalog.get(0).aufgabeklassen.get(0).name + katalog.get(0).aufgabeklassen.get(0).preset);
+            System.out.println(katalog.get(0).name + katalog.get(0).config.timetracking + katalog.get(0).config.babystep.value + katalog.get(0).description + katalog.get(0).aufgabeklassen.get(0).name + katalog.get(0).aufgabeklassen.get(0).preset + katalog.get(0).aufgabetests.get(0).name + katalog.get(0).aufgabetests.get(0).preset);
 
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("FILE NOT FOUND");
         }
 
