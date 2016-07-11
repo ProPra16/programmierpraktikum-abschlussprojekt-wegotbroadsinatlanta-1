@@ -21,7 +21,7 @@ public class TDDTController implements Initializable{
 
     public void run(){
         Main.self.playSound();
-        Compile com = new Compile(new Project("sda","adsk"));
+        Compile com = new Compile();
     }
 
     //-----API----------------------------

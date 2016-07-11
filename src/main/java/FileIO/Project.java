@@ -11,12 +11,12 @@ public class Project {
 
     public String getClassName(int i){
         //returns class;
-        return "";//"convert()";
+        return "convert()";
     }
 
     public String getTestName(int i){
         //returns test;
-        return "";// "aTest()";
+        return "aTest()";
     }
 
     public Project(String c, String t){
