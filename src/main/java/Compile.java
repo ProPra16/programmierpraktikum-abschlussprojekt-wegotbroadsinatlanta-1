@@ -30,18 +30,12 @@ public class Compile {  // Verknüpft mit API KATA von Bendisposto
                 "            }\n" +
                 "\n" +
                 "            }";
-       /* CompilationResult result = compileCodeandTest("RomanNumberConverter",codetotest,false,"RomanNumberTest",code,true);
-        CompilationResult result2 =compileCode("main",codetotest,false);
-        DEBUG.out(result.toString());
-        DEBUG.out(result2.toString());
+        //CompilationResult result = compileCodeandTest("RomanNumberConverter",codetotest,false,"RomanNumberTest",code,true);
+       // CompilationResult result2 =compileCode("main",codetotest,false);
+        //DEBUG.out(result.toString());
+       // DEBUG.out(result2.toString());
         /*CompilationUnit code = new CompilationUnit(Proj.getClassName(TDDT.currenttask),Main.tcontroller.getLeftTextArea(),false);
-        CompilationUnit test = new CompilationUnit(Proj.getTestName(TDDT.currenttask),Main.tcontroller.getRightTextArea(),true);
-
-        JavaStringCompiler compiler = CompilerFactory.getCompiler(code,test);
-
-        compiler.compileAndRunTests();
-        outmessage += compiler.getCompilerResult().toString();
-        DEBUG.out(outmessage);*/
+        CompilationUnit test = new CompilationUnit(Proj.getTestName(TDDT.currenttask),Main.tcontroller.getRightTextArea(),true);*/
     }
 
     public static CompilationResult compileCodeandTest(String className1,String code1, boolean isTest1,String className2,String code2, boolean isTest2){
@@ -49,10 +43,12 @@ public class Compile {  // Verknüpft mit API KATA von Bendisposto
         CompilationUnit TestComUnit = new CompilationUnit(className2,code2,isTest2);
         JavaStringCompiler compiler = CompilerFactory.getCompiler(CodeComUnit,TestComUnit);
         compiler.compileAndRunTests();
-        DEBUG.out(String.valueOf(compiler.getCompilerResult().hasCompileErrors()));
+        String out = "";
+        out +=  compiler.getCompilerResult().getCompilerErrorsForCompilationUnit(CodeComUnit);
+        out +=  compiler.getCompilerResult().getCompilerErrorsForCompilationUnit(TestComUnit);
+        DEBUG.out(out);
         boolean h = compiler.getCompilerResult().hasCompileErrors();
-
-        CompilationResult result = new CompilationResult(true,"testcase",h);
+        CompilationResult result = new CompilationResult(true,out,h);
         return result;
     }
 
@@ -65,10 +61,10 @@ public class Compile {  // Verknüpft mit API KATA von Bendisposto
         CompilationResult res;
         boolean h = compiler.getCompilerResult().hasCompileErrors();
         if(isTest){
-            int n = compiler.getTestResult().getNumberOfFailedTests();
-            int s = compiler.getTestResult().getNumberOfSuccessfulTests();
+//            int n = compiler.getTestResult().getNumberOfFailedTests();
+//            int s = compiler.getTestResult().getNumberOfSuccessfulTests();
             out +=  compiler.getCompilerResult().getCompilerErrorsForCompilationUnit(ComUnit);
-            res = new CompilationResult(isTest,out,h,n,s);
+            res = new CompilationResult(isTest,out,h);//,n,s);
         }else{
             out += compiler.getCompilerResult().getCompilerErrorsForCompilationUnit(ComUnit);
             res = new CompilationResult(isTest,out,h);
