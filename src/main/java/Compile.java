@@ -48,7 +48,9 @@ public class Compile {  // Verknüpft mit API KATA von Bendisposto
         out +=  compiler.getCompilerResult().getCompilerErrorsForCompilationUnit(TestComUnit);
         DEBUG.out(out);
         boolean h = compiler.getCompilerResult().hasCompileErrors();
-        CompilationResult result = new CompilationResult(true,out,h);
+        int n = compiler.getTestResult().getNumberOfFailedTests();
+        int s = compiler.getTestResult().getNumberOfSuccessfulTests();
+        CompilationResult result = new CompilationResult(true,out,h,n,s);
         return result;
     }
 
