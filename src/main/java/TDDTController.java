@@ -17,6 +17,7 @@ import java.util.ResourceBundle;
  */
 public class TDDTController implements Initializable{
     private boolean testMode = true;
+    private boolean refactor = false;
     public CompilationResult result = null;
     @FXML
     private TextArea fieldgreen;
@@ -26,8 +27,11 @@ public class TDDTController implements Initializable{
     private Button switchbutton;
     @FXML
     private Label errorcounter;
+    @FXML
+    private Label status;
 
 
+    String tempCode = "";
 
     String leapyearcode="public class LeapYear{\n" +
             "  public static boolean isLeapYear(int year) {\n" +
@@ -45,12 +49,12 @@ public class TDDTController implements Initializable{
             "\n" +
             " @Test\n" +
             " public void year2000IsALeapYear()  {\n" +
-            "  assertEquals(true, LeapYear.isLeapYear(2019));\n" +
+            "  assertEquals(true, LeapYear.isLeapYear(2000));\n" +
             " }\n" +
             "\n" +
             " @Test\n" +
             " public void year2400IsALeapYear()  {\n" +
-            "  assertEquals(false, LeapYear.isLeapYear(2400));\n" +
+            "  assertEquals(true, LeapYear.isLeapYear(2400));\n" +
             " }\n" +
             "\n" +
             " @Test\n" +
@@ -93,8 +97,18 @@ public class TDDTController implements Initializable{
     public void initialize(URL url, ResourceBundle rb) {
         setLeftTextArea(leapyearcode);
         setRightTextArea(leapyeartest);
+        status.setStyle("font-weight:bold;letter-spacing:1pt;word-spacing:2pt;font-size:32px;text-align:left;font-family:arial, helvetica, sans-serif;line-height:1;");
+        if(testMode){
+            setLabel(status,"TESTMODE",Color.RED);
+            fieldgreen.setEditable(false);
+            switchbutton.setDisable(true);
+        }
     }
 
+    public void setLabel(Label l,String s, Color c){
+        l.setText(s);
+        l.setTextFill(c);
+    }
     /*
     ---------------------------------------------------
     benötigte Klassen:
@@ -117,6 +131,12 @@ public class TDDTController implements Initializable{
             if(testMode){
                 //TestClassCompilen
                 CompilationResult result = Compile.compileCodeandTest(findClassName(getLeftTextArea()),getLeftTextArea(),false,findClassName(getRightTextArea()),getRightTextArea(),true);
+                //Check for Failing Test or not compiling <code></code>
+                DEBUG.out(String.valueOf(result.numberOfFailedTest));
+                if(result.numberOfFailedTest>0 || result.hasErrors == true){ // or haserrors == true
+                    switchbutton.setDisable(false);
+                    //set switchbutton color greeen !!!!
+                }
             }else{
                 //MainCodeCompilen
                 CompilationResult result = Compile.compileCode(findClassName(getLeftTextArea()),getLeftTextArea(),false);
@@ -128,15 +148,32 @@ public class TDDTController implements Initializable{
     }
 
     public void switchField(){
-        if(testMode){ //&& !result.hasErrors
-            //Switching to Code
-            fieldgreen.setEditable(true);
-            fieldred.setEditable(false);
-            testMode = false;
-        }else{
+        CompilationResult result = Compile.compileCodeandTest(findClassName(getLeftTextArea()),getLeftTextArea(),false,findClassName(getRightTextArea()),getRightTextArea(),true);
+        if(refactor && !result.hasErrors){
             fieldgreen.setEditable(false);
             fieldred.setEditable(true);
             testMode = true;
+            setLabel(status,"TESTMODE",Color.RED);
+        }else{
+            if(testMode){ //&& !result.hasErrors
+                //Switching to Code
+                fieldgreen.setEditable(true);
+                fieldred.setEditable(false);
+                testMode = false;
+                setLabel(status,"CODEMODE",Color.GREEN);
+                tempCode = getLeftTextArea();
+            }else{
+            if(result.hasErrors){   //RESETET Code falls Error  und Switch back
+                setLeftTextArea(tempCode);
+                fieldgreen.setEditable(false);
+                fieldred.setEditable(true);
+                testMode = true;
+                setLabel(status,"TESTMODE",Color.RED);
+            }else if(result.hasErrors == false){
+                refactor = true;
+                setLabel(status,"REFACTORING",Color.BLACK);
+            }
+        }
         }
     }
 

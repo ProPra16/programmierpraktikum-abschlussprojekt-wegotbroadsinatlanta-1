@@ -12,6 +12,8 @@
         <URL value="@mainstyle.css" />
     </stylesheets>
 
+    <Label fx:id="status" GridPane.columnIndex="0" GridPane.rowIndex="0" Text="STATUS" />
+
     <TextArea fx:id="fieldgreen"
             GridPane.columnIndex="1" GridPane.rowIndex="1" id="fieldgreen" GridPane.vgrow="ALWAYS"/>
 

@@ -12,30 +12,6 @@ public class Compile {  // Verknüpft mit API KATA von Bendisposto
     public Compile(){
         DEBUG.out("Starting Compiler");
         Main.self.statusBar.output.setText("Starting Compiler...");
-
-        String codetotest = "public class RomanNumberConverter{\n" +
-                "            public static String convert(){\n" +
-                "            return null;\n" +
-                "            }\n" +
-                "            }";
-
-        String code = "import static org.junit.Assert.*;\n" +
-                "            import org.junit.Test;\n" +
-                "\n" +
-                "            public class RomanNumbersTest{\n" +
-                "\n" +
-                "            @Test\n" +
-                "            public void aTest(){\n" +
-                "            assertEquals(null,RomanNumberConverter.convert());\n" +
-                "            }\n" +
-                "\n" +
-                "            }";
-        //CompilationResult result = compileCodeandTest("RomanNumberConverter",codetotest,false,"RomanNumberTest",code,true);
-       // CompilationResult result2 =compileCode("main",codetotest,false);
-        //DEBUG.out(result.toString());
-       // DEBUG.out(result2.toString());
-        /*CompilationUnit code = new CompilationUnit(Proj.getClassName(TDDT.currenttask),Main.tcontroller.getLeftTextArea(),false);
-        CompilationUnit test = new CompilationUnit(Proj.getTestName(TDDT.currenttask),Main.tcontroller.getRightTextArea(),true);*/
     }
 
     public static CompilationResult compileCodeandTest(String className1,String code1, boolean isTest1,String className2,String code2, boolean isTest2){
@@ -48,8 +24,8 @@ public class Compile {  // Verknüpft mit API KATA von Bendisposto
         out +=  compiler.getCompilerResult().getCompilerErrorsForCompilationUnit(TestComUnit);
         DEBUG.out(out);
         boolean h = compiler.getCompilerResult().hasCompileErrors();
-        int n = 99;
-        int s = 0;
+        int n = -1;
+        int s = -1;
         try{n = compiler.getTestResult().getNumberOfFailedTests(); //FIX Otherwise Crashes
         s = compiler.getTestResult().getNumberOfSuccessfulTests();}catch(Exception e){e.printStackTrace();}
         CompilationResult result = new CompilationResult(true,out,h,n,s);
