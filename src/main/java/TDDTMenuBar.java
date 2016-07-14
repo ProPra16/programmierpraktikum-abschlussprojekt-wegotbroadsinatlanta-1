@@ -14,6 +14,8 @@ import java.io.IOException;
  */
 public class TDDTMenuBar {
 
+    public static Stage settings;
+
     public MenuBar TopMenu(){
         MenuBar mBar = new MenuBar();
         Menu ActionMenu = new Menu("Action");
@@ -48,7 +50,11 @@ public class TDDTMenuBar {
         /*FXMLLoader settingsloader = new FXMLLoader(getClass().getResource("settings.fxml"));  // Design ----> Ando
         Parent loadsettings = settingsloader.load();
         Main.Bp.setCenter(loadsettings);*/
-        Stage settings = new Stage();
+        settings = new Stage();
+        settings.setTitle("Feature-Einstellungen");
+        DesignCheckBox ds = new DesignCheckBox();
+        Scene s = ds.DesignCheckBox();
+        settings.setScene(s);
         settings.show();
     }
 }
