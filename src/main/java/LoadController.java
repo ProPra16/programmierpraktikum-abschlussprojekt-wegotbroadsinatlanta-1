@@ -11,11 +11,9 @@ import javafx.scene.control.ListView;
  * Created by Lionel on 28.06.2016.
  */
 public class LoadController {       //Design des FXML muss überarbeitet werden  ---> Ando
-    @FXML
-    ListView list;
+    @FXML private ListView list;
     @FXML Button startTDDT;
-    ObservableList<String> items = FXCollections.observableArrayList (
-            "Aufgabe: 1", "Aufgabe: 2", "Aufgabe: 3", "Aufgabe: 4", "Aufgabe: 1", "Aufgabe: 2", "Aufgabe: 3", "Aufgabe: 4", "Aufgabe: 1", "Aufgabe: 2", "Aufgabe: 3", "Aufgabe: 4", "Aufgabe: 1", "Aufgabe: 2", "Aufgabe: 3", "Aufgabe: 4"); ///Die Aufgabenstellungen müssen noch eingefügt werden
+    ObservableList<String> items = FXCollections.observableArrayList ("Aufgabe: 1", "Aufgabe: 2"); ///Die Aufgabenstellungen müssen noch eingefügt werden
 
     void initialize(){
         list.setItems(items);

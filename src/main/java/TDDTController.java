@@ -1,15 +1,8 @@
-import FileIO.Project;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import org.fxmisc.richtext.CodeArea;
 import org.fxmisc.richtext.LineNumberFactory;
 import org.fxmisc.richtext.StyleSpans;
@@ -107,7 +100,6 @@ public class TDDTController implements Initializable{
     public void initialize(URL url, ResourceBundle rb) {
         setLeftTextArea(leapyearcode);
         setRightTextArea(leapyeartest);
-        status.setStyle("font-weight:bold;letter-spacing:1pt;word-spacing:2pt;font-size:32px;text-align:left;font-family:arial, helvetica, sans-serif;line-height:1;");
         if(testMode){
             setLabel(status,"TESTMODE",Color.RED);
             fieldgreen.setEditable(false);
@@ -128,9 +120,6 @@ public class TDDTController implements Initializable{
                 .subscribe(change -> {
                     fieldred.setStyleSpans(0, computeHighlighting(fieldred.getText()));
                 });
-
-
-
     }
 
     public void setLabel(Label l,String s, Color c){
