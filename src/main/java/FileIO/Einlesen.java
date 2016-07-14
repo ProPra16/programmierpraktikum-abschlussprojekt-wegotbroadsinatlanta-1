@@ -18,7 +18,7 @@ public class Einlesen{
     public ArrayList<Aufgabe> lesen(){
         ArrayList<Aufgabe> katalog = new ArrayList<Aufgabe>();
         try {
-            File inputFile = new File("./catalog.txt");
+            File inputFile = new File("catalogback.xml");
             DocumentBuilderFactory docfactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docbuilder = docfactory.newDocumentBuilder();
             Document doc = docbuilder.parse(inputFile);

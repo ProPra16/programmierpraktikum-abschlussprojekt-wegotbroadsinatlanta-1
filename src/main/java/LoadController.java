@@ -1,4 +1,6 @@
 import FileIO.Aufgabe;
+import FileIO.Einlesen;
+import FileIO.FileIO;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -27,7 +29,8 @@ public class LoadController implements Initializable{       //Design des FXML mu
     ObservableList<String> items = FXCollections.observableArrayList (); ///Die Aufgabenstellungen müssen noch eingefügt werden
 
     public void initialize(URL url, ResourceBundle rb){
-        kat = new FileIO.Einlesen().lesen();
+        Einlesen e = new Einlesen();
+        kat = e.lesen();
         description.setEditable(false);
         for(int i = 0;i<kat.size();i++){items.add(i,kat.get(i).name);}
         list.setItems(items);
