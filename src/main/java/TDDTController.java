@@ -21,6 +21,10 @@ import java.util.regex.Pattern;
 public class TDDTController implements Initializable{
     private boolean testMode = true;
     private boolean refactor = false;
+    //****** Timetracking and Babysteps must be implemented by Felix
+    public boolean babysteps = false;
+    public boolean timetracking = false;
+    //******
     public CompilationResult result = null;
     @FXML
     private CodeArea fieldgreen;
@@ -36,70 +40,8 @@ public class TDDTController implements Initializable{
 
     String tempCode = "";
 
-    String leapyearcode="public class LeapYear{\n" +
-            "  public static boolean isLeapYear(int year) {\n" +
-            "    if (year % 400 == 0) return true;\n" +
-            "    if (year % 100 == 0) return false;\n" +
-            "    if (year % 4 == 0) return true;\n" +
-            "    return false;\n" +
-            "  }\n" +
-            "}\n";
-
-    String leapyeartest = "import static org.junit.Assert.*;\n" +
-            "import org.junit.*;\n" +
-            "\n" +
-            "public class LeapYearTest{\n" +
-            "\n" +
-            " @Test\n" +
-            " public void year2000IsALeapYear()  {\n" +
-            "  assertEquals(true, LeapYear.isLeapYear(2000));\n" +
-            " }\n" +
-            "\n" +
-            " @Test\n" +
-            " public void year2400IsALeapYear()  {\n" +
-            "  assertEquals(true, LeapYear.isLeapYear(2400));\n" +
-            " }\n" +
-            "\n" +
-            " @Test\n" +
-            " public void year1900IsNoLeapYear()  {\n" +
-            "  assertEquals(false, LeapYear.isLeapYear(1900));\n" +
-            " }\n" +
-            "\n" +
-            " @Test\n" +
-            " public void year1800IsNoLeapYear()  {\n" +
-            "  assertEquals(false, LeapYear.isLeapYear(1800));\n" +
-            " }\n" +
-            "\n" +
-            " @Test\n" +
-            " public void year1904IsALeapYear()  {\n" +
-            "  assertEquals(true, LeapYear.isLeapYear(1904));\n" +
-            " }\n" +
-            "\n" +
-            " @Test\n" +
-            " public void year1908IsALeapYear()  {\n" +
-            "  assertEquals(true, LeapYear.isLeapYear(1908));\n" +
-            " }\n" +
-            "\n" +
-            " @Test\n" +
-            " public void year1901IsNoLeapYear()  {\n" +
-            "  assertEquals(false, LeapYear.isLeapYear(1901));\n" +
-            " }\n" +
-            "\n" +
-            " @Test\n" +
-            " public void year1902IsNoLeapYear()  {\n" +
-            "  assertEquals(false, LeapYear.isLeapYear(1902));\n" +
-            " }\n" +
-            "\n" +
-            "\n" +
-            "}\n" +
-            "\n";
-
-
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        setLeftTextArea(leapyearcode);
-        setRightTextArea(leapyeartest);
         if(testMode){
             setLabel(status,"TESTMODE",Color.RED);
             fieldgreen.setEditable(false);
