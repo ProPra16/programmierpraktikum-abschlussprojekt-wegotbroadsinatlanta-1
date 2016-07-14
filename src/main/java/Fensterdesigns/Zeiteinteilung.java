@@ -1,7 +1,8 @@
+//alert erstmal auskommentiert--------------------------------------------------------------------------------
 package Fensterdesigns;
 
 import javafx.application.Application;
-import javafx.scene.control.Alert;
+//import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 /**
@@ -30,10 +31,10 @@ public class Zeiteinteilung extends Application{
     public void start(Stage primarystage){
 
         primarystage.setTitle("Zeit");
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Deine Zeit");
-        alert.setHeaderText("Du hast insgesamt " + differenz + " Sekunden benötigt.");
-        alert.show();
-        }
+        //Alert alert = new Alert(Alert.AlertType.ERROR);
+        //alert.setTitle("Deine Zeit");
+        //alert.setHeaderText("Du hast insgesamt " + differenz + " Sekunden benötigt.");
+        //alert.show();
+        //}
 
 }
