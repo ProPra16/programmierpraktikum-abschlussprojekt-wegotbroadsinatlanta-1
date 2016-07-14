@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827a91df-5d52-471f-988c-f99c8934c1eb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/LoadController$1.class" afterPath="$PROJECT_DIR$/build/classes/main/LoadController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/LoadController.class" afterPath="$PROJECT_DIR$/build/classes/main/LoadController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/LoadController.java" afterPath="$PROJECT_DIR$/src/main/java/LoadController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/load.fxml" afterPath="$PROJECT_DIR$/src/main/resources/load.fxml" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -582,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468528813390</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Description wird eingelesen und das descriptionfenster ist uneditable">
+      <created>1468530051933</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1468530051933</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -649,7 +658,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="neue Klasse fürs einlesen, weil es mit der alten probleme gab&#10;und im loadkontroller eingebaut" />
     <MESSAGE value="einlesen komplett in load controller eingebaut" />
-    <option name="LAST_COMMIT_MESSAGE" value="einlesen komplett in load controller eingebaut" />
+    <MESSAGE value="Description wird eingelesen und das descriptionfenster ist uneditable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Description wird eingelesen und das descriptionfenster ist uneditable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
