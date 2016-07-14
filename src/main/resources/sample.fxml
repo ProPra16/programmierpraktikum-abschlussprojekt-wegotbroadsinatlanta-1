@@ -20,7 +20,7 @@
 
     <TextArea
             GridPane.columnIndex="2" GridPane.rowIndex="1" id="field-red" fx:id="fieldred"/>
-    <StackPane
+
     <Button
             fx:id="runbutton" GridPane.columnIndex="1" GridPane.columnSpan="1" GridPane.rowIndex="2" onAction="#run">
         </Button>
