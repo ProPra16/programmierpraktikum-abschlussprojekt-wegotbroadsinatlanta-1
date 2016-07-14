@@ -40,10 +40,11 @@ public class Main extends Application {
 
     public static void main(String[] args) {  // LAUNCH Parameter
         //launch(args);
+        //playSound();
         Application.launch(Main.class, args);
     }
 
-    public void playSound() {
+    public static void playSound() {
         try {
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("C:/test.wav").getAbsoluteFile());
             Clip clip = AudioSystem.getClip();

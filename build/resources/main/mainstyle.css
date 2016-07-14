@@ -14,5 +14,17 @@ root {
     -fx-shadow-highlight-color: green;
 }
 #runbutton{
+    -fx-pref-width:50;
+    -fx-background-image: url("./images/play.png");
+    -fx-background-size: 25 25;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+}
 
+#switchbutton{
+    -fx-pref-width:50;
+    -fx-background-image: url("./images/circle.png");
+    -fx-background-size: 25 25;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
 }

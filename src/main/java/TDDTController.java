@@ -149,6 +149,7 @@ public class TDDTController implements Initializable{
 
     public void switchField(){
         CompilationResult result = Compile.compileCodeandTest(findClassName(getLeftTextArea()),getLeftTextArea(),false,findClassName(getRightTextArea()),getRightTextArea(),true);
+        errorcounter.setText("Fehler in Tests: " + result.numberOfFailedTest);
         if(refactor && !result.hasErrors){
             fieldgreen.setEditable(false);
             fieldred.setEditable(true);
