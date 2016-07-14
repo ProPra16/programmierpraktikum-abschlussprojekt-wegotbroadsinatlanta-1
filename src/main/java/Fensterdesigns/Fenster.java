@@ -52,8 +52,8 @@ public class Fenster extends Application {
         Image beendenicon = new Image(getClass().getResourceAsStream(""));
         beenden.setGraphic(new ImageView(beendenicon));
 
-        Image graphicon = new Image(getClass().getResourceAsStream("../report.png"));
-        statistik.setGraphic(new ImageView(graphicon));
+       // Image graphicon = new Image(getClass().getResourceAsStream("../report.png"));
+       // statistik.setGraphic(new ImageView(graphicon));
 
         HBox layoutButton = new HBox();
         layoutButton.getChildren().addAll(neustart, beenden, statistik);
