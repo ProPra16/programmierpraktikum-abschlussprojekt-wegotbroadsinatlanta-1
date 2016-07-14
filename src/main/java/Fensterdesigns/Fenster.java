@@ -1,10 +1,14 @@
 package Fensterdesigns;
 
 import javafx.application.Application;
+import javafx.beans.binding.Bindings;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -13,7 +17,7 @@ import javafx.stage.Stage;
  */
 public class Fenster extends Application {
     Stage window;
-    Button abbrechen, neustart, statistik;
+    Button beenden, neustart, statistik;
     HBox graph;
 
     public static void main(String[]args){
@@ -23,11 +27,7 @@ public class Fenster extends Application {
     @Override
     public void start(Stage primarystage){
         window = primarystage;
-        fensterkonstrukt(window);
-    }
-
-    private void fensterkonstrukt(Stage window){
-        abbrechen = new Button("Abbrechen");
+        beenden = new Button("Beenden");
         neustart = new Button("Neustart");
         statistik = new Button("Statistik");
 
@@ -35,7 +35,7 @@ public class Fenster extends Application {
             //Zurück zu Fenster 1
         });
 
-        abbrechen.setOnAction(e -> {
+        beenden.setOnAction(e -> {
            window.close();
         });
 
@@ -46,10 +46,20 @@ public class Fenster extends Application {
             */
         });
 
+        Image neustarticon = new Image(getClass().getResourceAsStream(""));
+        neustart.setGraphic(new ImageView(neustarticon));
+
+        Image beendenicon = new Image(getClass().getResourceAsStream(""));
+        beenden.setGraphic(new ImageView(beendenicon));
+
+        Image graphicon = new Image(getClass().getResourceAsStream("../report.png"));
+        statistik.setGraphic(new ImageView(graphicon));
+
         HBox layoutButton = new HBox();
-        layoutButton.getChildren().addAll(neustart, abbrechen, statistik);
+        layoutButton.getChildren().addAll(neustart, beenden, statistik);
 
         BorderPane layoutmain = new BorderPane();
+
         layoutmain.setTop(layoutButton);
         layoutmain.setCenter(graph);
 
