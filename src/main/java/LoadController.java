@@ -59,7 +59,9 @@ public class LoadController implements Initializable{       //Design des FXML mu
     public void loadTask(String code, String test, String taskname, boolean babysteps, boolean Timetracking){
         Main.tcontroller.setLeftTextArea(code);
         Main.tcontroller.setRightTextArea(test);
-
+        Main.tcontroller.babysteps = babysteps;
+        Main.tcontroller.timetracking = Timetracking;
+        Main.self.statusBar.output.setText("Loaded new Template...");
     }
 }
 
