@@ -15,7 +15,7 @@ public class Main extends Application {
         mainStage.setScene(new Scene(root, 1000, 800));
         mainStage.show();
         FileIO.writeKatalog(null);
-        FileIO.readKatalog();
+        FileIO.readKatalog2();
     }
 
 

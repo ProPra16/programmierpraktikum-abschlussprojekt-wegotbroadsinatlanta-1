@@ -1,6 +1,5 @@
 package FileIO;
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class FileIO {
@@ -13,36 +12,23 @@ public class FileIO {
         try {
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename), "utf-8"));
             writer.write(getTag("excercises", true));
-            for(int i=0; i < 1/*katalog.size()*/; i++) {
+            for(int i=0; i < katalog.size(); i++) {
                 Aufgabe aktuelleAufgabe = new Aufgabe();
-                //test code
-                AufgabeBlock a = new AufgabeBlock("hallo welt", "public class RomanNumberConverter {\n" +
-                        "}");
-                aktuelleAufgabe.aufgabeklassen.add(a);
-                AufgabeBlock test = new AufgabeBlock("test yeah", "import static org.junit.Assert.*;\n" +
-                        "import org.junit.Test;\n" +
-                        "public class RomanNumbersTest {\n" +
-                        "@Test\n" +
-                        "public void testSomething() {\n" +
-                        "}\n" +
-                        "}");
-                aktuelleAufgabe.aufgabetests.add(test);
 
-                //bis hier
-                writer.write(getXMLOneValue("excercise", "name", "ando"/*aktuelleAufgabe.name*/, true));
+                writer.write(getXMLOneValue("excercise", "name", aktuelleAufgabe.name, true));
                 writer.write(getTag("description", true));
-                writer.write("teste description"/*aktuelleAufgabe.description*/);
+                writer.write(aktuelleAufgabe.description);
                 writer.write(getTag("description", false));
-                for(int j=0; j < 1/*aktuelleAufgabe.aufgabeklassen.size()*/; j++) {
+                for(int j=0; j < aktuelleAufgabe.aufgabeklassen.size(); j++) {
                     writer.write(getXMLArray("classes", "class", aktuelleAufgabe.aufgabeklassen));
                 }
-                for(int k=0; k < 1/*aktuelleAufgabe.aufgabetests.size()*/; k++) {
+                for(int k=0; k < aktuelleAufgabe.aufgabetests.size(); k++) {
                     writer.write(getXMLArray("tests", "test", aktuelleAufgabe.aufgabetests));
                 }
                 writer.write(getTag("config", true));
                 if(aktuelleAufgabe.config.babystep.value == "True") writer.write(getXMLWithValueAndTime("babysteps", aktuelleAufgabe.config.babystep.value, aktuelleAufgabe.config.babystep.time));
-                else writer.write(getXMLOneValue("babysteps", "value", "true"/*aktuelleAufgabe.config.babystep.value*/, false));
-                writer.write(getXMLOneValue("timetracking", "value", "yeah"/*aktuelleAufgabe.config.timetracking*/, false));
+                else writer.write(getXMLOneValue("babysteps", "value", aktuelleAufgabe.config.babystep.value, false));
+                writer.write(getXMLOneValue("timetracking", "value", aktuelleAufgabe.config.timetracking, false));
                 writer.write(getTag("config", false));
                 writer.write(getTag("excercise", false));
             }
@@ -52,6 +38,43 @@ public class FileIO {
             System.out.println("FILE NOT FOUND");
         }
     }
+
+   /* public static ArrayList<Aufgabe> readKatalog2(){
+        ArrayList<Aufgabe> katalog = new ArrayList<Aufgabe>();
+        try {
+            reader = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "utf-8"));
+            String line = reader.readLine();
+            StringBuilder b = new StringBuilder();
+            int counter = 0;
+
+       while (line != null) {
+                line = reader.readLine();
+                if(line.contains("<excercises>"));
+                if(line.contains("<excercise name=")) {
+                    Aufgabe aufgabe = new Aufgabe();
+                    counter++;
+                    String[] pre = null;
+                    String[] daten = null;
+                    pre = line.split("<excercise name=\"");
+                    daten = pre[1].split("\">");
+                    aufgabe.name = daten[0];
+                    katalog.add(aufgabe);
+                }
+                if(line.contains(""))
+            }
+
+
+
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("FILE NOT FOUND");
+        }
+        return katalog;
+    }
+
+    */
 
     public static ArrayList<Aufgabe> readKatalog(){
         ArrayList<Aufgabe> katalog = new ArrayList<Aufgabe>();
@@ -115,7 +138,6 @@ public class FileIO {
                 }
                 katalog.add(aufgabe);
             }
-            System.out.println(katalog.get(0).aufgabeklassen.get(0).name + katalog.get(0).aufgabeklassen.get(0).preset);
 
         } catch (Exception e) {
             e.printStackTrace();
