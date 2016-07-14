@@ -11,13 +11,7 @@ public class Main extends Application {
     public static TDDTController tcontroller;
     public static BorderPane Bp;
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        mainStage.setTitle("TDDT");
-        mainStage.setScene(new Scene(root, 1000, 800));
-        mainStage.show();
-        FileIO.writeKatalog(null);
-        FileIO.readKatalog();
+
     public void start(Stage primaryStage2) throws Exception{
         DEBUG.out("Launch Application");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));

@@ -1,4 +1,4 @@
-import FileIO.Project;
+//import FileIO.Project;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -28,7 +28,7 @@ public class LoadController {       //Design des FXML muss überarbeitet werden 
 
     public void startmain(int task) { //Ruft Main mit Parametern auf also Auswahl der Aufgabe
         DEBUG.out("Starting TDDT with Task Number: " + task);
-        TDDT.setTask(new Project("code ","testjunitfile"));
+        //TDDT.setTask(new Project("code ","testjunitfile"));
     }
 
     @FXML void selectTask(){
