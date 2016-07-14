@@ -1,4 +1,5 @@
 //import FileIO.Project;
+import FileIO.Aufgabe;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -6,6 +7,11 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+
+import java.util.ArrayList;
+
+import static FileIO.FileIO.readKatalog;
+import static FileIO.FileIO.writeKatalog;
 
 /**
  * Created by Lionel on 28.06.2016.
@@ -29,7 +35,11 @@ public class LoadController {       //Design des FXML muss überarbeitet werden 
 
     public void startTDDT(){
         Main.self.Bp.setCenter(Main.self.root);
-        loadTask("code","test","23",true,true);
+        int i = 0;
+        ArrayList<Aufgabe> katalog = new ArrayList<Aufgabe>();
+        writeKatalog(katalog);
+        ArrayList<Aufgabe> katalog2 = readKatalog();
+        loadTask(katalog2.get(i).aufgabeklassen.get(0).preset,katalog2.get(i).aufgabetests.get(0).preset, katalog2.get(i).name, katalog2.get(i).config.babystep.value, katalog2.get(i).config.timetracking);
     }
 
     public void loadTask(String code, String test, String taskname, boolean babysteps, boolean Timetracking){

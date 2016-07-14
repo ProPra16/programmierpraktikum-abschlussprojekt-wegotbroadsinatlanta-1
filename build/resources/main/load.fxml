@@ -10,7 +10,6 @@
 
     <ListView fx:id="list" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
 
-    <Button
-             GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" text="Start" fx:id="but"/>
+    <Button GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" text="Start" fx:id="1startTDDT" onAction="#startTDDT"/>
 
 </GridPane>
