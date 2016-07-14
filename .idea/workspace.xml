@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="706f41d0-cb40-42a6-b490-14bdef557820" name="Default" comment="RichTextFX; IDE style highlighting; +++ Dark theme by AndranikSar">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/catalog.txt" />
+    <list default="true" id="706f41d0-cb40-42a6-b490-14bdef557820" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" />
@@ -12,13 +11,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/load.fxml" afterPath="$PROJECT_DIR$/build/resources/main/load.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/sample.fxml" afterPath="$PROJECT_DIR$/build/resources/main/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/Aufgabe.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/Aufgabe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/AufgabeBlock.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/AufgabeBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/Config.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/LoadController.java" afterPath="$PROJECT_DIR$/src/main/java/LoadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/load.fxml" afterPath="$PROJECT_DIR$/src/main/resources/load.fxml" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1121,7 +1113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1468502760209</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Katalog geschrieben und hinzugefügt">
+      <created>1468517175044</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1468517175044</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1213,7 +1212,8 @@
     <MESSAGE value="Added all 3 Modes // TESTOMODE, CODEMOE,REFACTORING --- Switching works" />
     <MESSAGE value="Buttons" />
     <MESSAGE value="RichTextFX; IDE style highlighting; +++ Dark theme by AndranikSar" />
-    <option name="LAST_COMMIT_MESSAGE" value="RichTextFX; IDE style highlighting; +++ Dark theme by AndranikSar" />
+    <MESSAGE value="Katalog geschrieben und hinzugefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Katalog geschrieben und hinzugefügt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
