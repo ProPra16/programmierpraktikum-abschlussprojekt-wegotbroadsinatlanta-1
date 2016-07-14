@@ -5,12 +5,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
  * Created by Ando Mando on 05.07.2016.
  */
-public class Fenster3 extends Application {
+public class Fenster extends Application {
     Stage window;
     Button abbrechen, neustart;
 
@@ -29,10 +30,13 @@ public class Fenster3 extends Application {
         HBox layout = new HBox();
         layout.getChildren().addAll(neustart, abbrechen);
 
-        BorderPane borderpane = new BorderPane();
-        borderpane.setBottom(layout);
+        HBox graph = new HBox();
+        //graph.getChildren().add(Chart.getChart(20.0, 20.0, 20.0));
 
-        Scene scene = new Scene(borderpane, 600, 400);
+        BorderPane borderpane = new BorderPane();
+        borderpane.setTop(layout);
+
+        Scene scene = new Scene(borderpane, 800, 500);
         window.setScene(scene);
 
         window.show();

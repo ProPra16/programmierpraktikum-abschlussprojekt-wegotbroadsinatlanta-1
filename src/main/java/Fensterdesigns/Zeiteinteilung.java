@@ -7,7 +7,8 @@ import javafx.stage.Stage;
 /**
  * Created by Ando Mando on 07.07.2016.
  */
-public class Zeiteinteilung extends Application{
+public class Zeiteinteilung{
+
     String bereich;
     long startZeit;
     long endZeit;
@@ -17,19 +18,5 @@ public class Zeiteinteilung extends Application{
         this.bereich = bereich;
         this.startZeit = startZeit;
     }
-
-    public void zeitunterschied(){
-        this.differenz = this.endZeit - this. startZeit;
-    }
-
-    @Override
-    public void start(Stage primarystage){
-
-        primarystage.setTitle("Zeit");
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Deine Zeit");
-        alert.setHeaderText("Du hast insgesamt " + differenz + " Sekunden benötigt.");
-        alert.show();
-        }
 
 }

@@ -9,14 +9,14 @@ import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
 public class Chart extends Application {
-    double redprozent;
-    double greenprozent;
-    double refacprozent;
+    static double redprozent;
+    static double greenprozent;
+    static double refacprozent;
 
     final static String eins = "";
 
 
-    public Chart(double red, double green, double refac){
+    public static void getchart(double red, double green, double refac){
         double gesamt = red + green + refac;
         redprozent = 100 / gesamt * red;
         greenprozent = 100 / gesamt * green;
