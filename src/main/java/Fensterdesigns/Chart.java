@@ -9,9 +9,20 @@ import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
 public class Chart extends Application {
-    final static String eins = "1";
-    final static String zwei = "2";
-    final static String drei = "3";
+    double redprozent;
+    double greenprozent;
+    double refacprozent;
+
+    final static String eins = "";
+
+
+    public Chart(double red, double green, double refac){
+        double gesamt = red + green + refac;
+        redprozent = 100 / gesamt * red;
+        greenprozent = 100 / gesamt * green;
+        refacprozent = 100 / gesamt * refac;
+
+    }
 
     @Override public void start(Stage stage) {
         stage.setTitle("Begutachtung der Entwicklungsschritte");
@@ -28,21 +39,15 @@ public class Chart extends Application {
 
         XYChart.Series ser1 = new XYChart.Series();
         ser1.setName("Red");
-        ser1.getData().add(new XYChart.Data(eins, 35.1));
-        ser1.getData().add(new XYChart.Data(zwei, 40.0));
-        ser1.getData().add(new XYChart.Data(drei, 20.0));
+        ser1.getData().add(new XYChart.Data(eins, redprozent));
 
         XYChart.Series ser2 = new XYChart.Series();
         ser2.setName("Green");
-        ser2.getData().add(new XYChart.Data(eins, 34.9));
-        ser2.getData().add(new XYChart.Data(zwei, 20.0));
-        ser2.getData().add(new XYChart.Data(drei, 20.0));
+        ser2.getData().add(new XYChart.Data(eins, greenprozent));
 
         XYChart.Series ser3 = new XYChart.Series();
         ser3.setName("Refactor");
-        ser3.getData().add(new XYChart.Data(eins, 30.0));
-        ser3.getData().add(new XYChart.Data(zwei, 40.0));
-        ser3.getData().add(new XYChart.Data(drei, 60.0));
+        ser3.getData().add(new XYChart.Data(eins, refacprozent));
 
         Scene scene  = new Scene(values,800,600);
         values.getData().addAll(ser1, ser2, ser3);

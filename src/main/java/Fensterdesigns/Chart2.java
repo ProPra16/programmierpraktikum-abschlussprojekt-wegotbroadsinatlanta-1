@@ -18,6 +18,15 @@ import javafx.util.Duration;
 
 public class Chart2 extends Application {
 
+
+    @Override public void start(Stage primaryStage) throws Exception {
+        init(primaryStage);
+        primaryStage.show();
+    }
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     private void init(Stage primaryStage) {
 
         HBox root = new HBox();
@@ -25,7 +34,6 @@ public class Chart2 extends Application {
         TextArea text = new TextArea ("");
         root.getChildren().addAll(Chart(text),text);
     }
-
         BarChart<String, Number> Chart(final TextArea text) {
 
         final String[] bereich = {"Red", "Green", "Refactor"};
@@ -82,13 +90,5 @@ public class Chart2 extends Application {
         Updater.play();
         values.getData().add(series1);
         return values;
-    }
-
-    @Override public void start(Stage primaryStage) throws Exception {
-        init(primaryStage);
-        primaryStage.show();
-    }
-    public static void main(String[] args) {
-        launch(args);
     }
 }
