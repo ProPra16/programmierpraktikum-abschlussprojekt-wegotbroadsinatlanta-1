@@ -27,7 +27,9 @@ public class SettingsFenster {
         bestätigen = new Button("Bestätigen");
         bestätigen.setOnAction(e -> {
             //Weiter zum nächsten FinalWindow, jedoch mit den ausgewählten Einstellungen
-
+            //Überprüfung
+            Main.tcontroller.babysteps = auswahl2.isSelected();
+            Main.tcontroller.timetracking = auswahl1.isSelected();
         });
 
         VBox layout = new VBox(10);
