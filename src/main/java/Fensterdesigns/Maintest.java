@@ -6,7 +6,7 @@ package Fensterdesigns;
 public class Maintest {
 
     public static void main(String[]args){
-        Chart chart = new Chart(40.0, 40.0, 20.0);
+
 
     }
 }

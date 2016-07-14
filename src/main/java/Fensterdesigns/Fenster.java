@@ -13,11 +13,23 @@ import javafx.stage.Stage;
  */
 public class Fenster extends Application {
     Stage window;
-    Button abbrechen, neustart;
+    Button abbrechen, neustart, statistik;
+    HBox graph;
+
+    public static void main(String[]args){
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primarystage){
+        window = primarystage;
+        fensterkonstrukt(window);
+    }
 
     private void fensterkonstrukt(Stage window){
         abbrechen = new Button("Abbrechen");
         neustart = new Button("Neustart");
+        statistik = new Button("Statistik");
 
         neustart.setOnAction(e -> {
             //Zurück zu Fenster 1
@@ -27,29 +39,23 @@ public class Fenster extends Application {
            window.close();
         });
 
-        HBox layout = new HBox();
-        layout.getChildren().addAll(neustart, abbrechen);
+        statistik.setOnAction(e -> {
+            /*Graph soll angezeigt werden
+            graph = new HBox();
+            graph.getChildren().add(getChart());
+            */
+        });
 
-        HBox graph = new HBox();
-        //graph.getChildren().add(Chart.getChart(20.0, 20.0, 20.0));
+        HBox layoutButton = new HBox();
+        layoutButton.getChildren().addAll(neustart, abbrechen, statistik);
 
-        BorderPane borderpane = new BorderPane();
-        borderpane.setTop(layout);
+        BorderPane layoutmain = new BorderPane();
+        layoutmain.setTop(layoutButton);
+        layoutmain.setCenter(graph);
 
-        Scene scene = new Scene(borderpane, 800, 500);
+        Scene scene = new Scene(layoutmain, 800, 500);
         window.setScene(scene);
 
         window.show();
-    }
-
-    /////////////////////////////////////////////////////TEST-AUSFÜHRUNG
-    public static void main(String[]args){
-        launch(args);
-    }
-
-    @Override
-    public void start(Stage primarystage){
-        window = primarystage;
-        fensterkonstrukt(window);
     }
 }
