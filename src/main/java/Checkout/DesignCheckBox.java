@@ -21,6 +21,16 @@ public class DesignCheckBox extends Application {
         launch(args);
     }
 
+   /* public void optioncheck(CheckBox auswahl1, CheckBox auswahl2) {
+        String message = "Auswahl:\n";
+
+        if(auswahl1.isSelected()) message += "Timetracking";
+
+        if(auswahl2.isSelected()) message += "Babystep";
+
+        System.out.println();
+    }*/
+
     @Override
     public void start(Stage primarystage) throws Exception{
         primarystage.setTitle("Einstellungen");
@@ -30,6 +40,7 @@ public class DesignCheckBox extends Application {
         auswahl2.setSelected(true);
 
         bestätigen = new Button("Bestätigen");
+       // bestätigen.setOnAction(e -> optioncheck(auswahl1, auswahl2));
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
