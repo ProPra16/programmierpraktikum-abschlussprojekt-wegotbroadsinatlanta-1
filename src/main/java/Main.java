@@ -27,8 +27,6 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
         root = loader.load();
         tcontroller = loader.getController();
-
-
         Bp = new BorderPane();
         Bp.setTop(new TDDTMenuBar().TopMenu());
         Bp.setCenter(root);
