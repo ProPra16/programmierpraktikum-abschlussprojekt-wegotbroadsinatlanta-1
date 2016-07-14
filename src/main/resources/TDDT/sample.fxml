@@ -1,0 +1,35 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import org.fxmisc.richtext.CodeArea?>
+<GridPane fx:id="grid" fx:controller="TDDTController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" >
+
+    <stylesheets>
+        <URL value="@../mainstyle.css" />
+    </stylesheets>
+
+    <Label fx:id="status" GridPane.columnIndex="0" GridPane.rowIndex="0" Text="STATUS" />
+
+    <CodeArea fx:id="fieldgreen"
+              GridPane.columnIndex="1" GridPane.rowIndex="1" id="fieldgreen" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS"/>
+    <CodeArea
+            GridPane.columnIndex="2" GridPane.rowIndex="1" id="field-red" fx:id="fieldred" GridPane.hgrow="ALWAYS"/>
+<!--
+    <TextArea fx:id="fieldgreen"
+            GridPane.columnIndex="1" GridPane.rowIndex="1" id="fieldgreen" GridPane.vgrow="ALWAYS"/>
+
+    <TextArea
+            GridPane.columnIndex="2" GridPane.rowIndex="1" id="field-red" fx:id="fieldred"/>
+    -->
+    <Button
+            fx:id="runbutton" GridPane.columnIndex="1" GridPane.columnSpan="1" GridPane.rowIndex="2" onAction="#run">
+        </Button>
+    <Button
+            fx:id="switchbutton" GridPane.columnIndex="2" GridPane.columnSpan="1" GridPane.rowIndex="2" onAction="#switchField">
+    </Button>
+
+    <Label fx:id="errorcounter" GridPane.columnIndex="3" GridPane.columnSpan="1" GridPane.rowIndex="2" Text="Fehler in Tests:"/>
+
+</GridPane>

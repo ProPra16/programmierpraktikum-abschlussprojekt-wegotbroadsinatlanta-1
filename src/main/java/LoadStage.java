@@ -17,7 +17,7 @@ public class LoadStage {
 
     public LoadStage(){
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("load.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("./load.fxml"));
             Stage loadStage = new Stage();
             loadStage.setTitle("TDDT - Loader");
             loadStage.setScene(new Scene(root, 1000, 800));

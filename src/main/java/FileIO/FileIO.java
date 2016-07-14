@@ -41,7 +41,7 @@ public class FileIO {
                     writer.write(getXMLArray("tests", "test", aktuelleAufgabe.aufgabetests));
                 }
                 writer.write(getTag("config", true));
-                if(aktuelleAufgabe.config.babystep.value == "True") writer.write(getXMLWithValueAndTime("babysteps", aktuelleAufgabe.config.babystep.value, aktuelleAufgabe.config.babystep.time));
+                if(aktuelleAufgabe.config.babystep.value == true) writer.write(getXMLWithValueAndTime("babysteps", aktuelleAufgabe.config.babystep.value, aktuelleAufgabe.config.babystep.time));
                 else writer.write(getXMLOneValue("babysteps", "value", "true"/*aktuelleAufgabe.config.babystep.value*/, false));
                 writer.write(getXMLOneValue("timetracking", "value", "yeah"/*aktuelleAufgabe.config.timetracking*/, false));
                 writer.write(getTag("config", false));
@@ -110,8 +110,14 @@ public class FileIO {
                 }
                 for(int j=1; j< NameBabystepTimetracking.length; j++) {
                     if(j==1) aufgabe.name = NameBabystepTimetracking[j];
-                    if(j==3) aufgabe.config.babystep.value = NameBabystepTimetracking[j];
-                    if(j==5) aufgabe.config.timetracking = NameBabystepTimetracking[j];
+                    if(j==3) {
+                        if(NameBabystepTimetracking[j] == "True")aufgabe.config.babystep.value = true;
+                        if(NameBabystepTimetracking[j] == "False")aufgabe.config.babystep.value = false;
+                    }
+                    if(j==5) {
+                        if(NameBabystepTimetracking[j] == "True")aufgabe.config.timetracking  = true;
+                        if(NameBabystepTimetracking[j] == "False")aufgabe.config.timetracking  = false;
+                    }
                     j++;
                 }
                 katalog.add(aufgabe);
@@ -126,7 +132,7 @@ public class FileIO {
         return katalog;
     }
 
-    private static String getXMLWithValueAndTime(String tag, String value, String time) {
+    private static String getXMLWithValueAndTime(String tag, boolean value, String time) {
         return "<" + tag + " value=\"" +  value + "\" time=\"" + time + "\" />\n";
     }
 

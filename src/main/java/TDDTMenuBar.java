@@ -38,7 +38,7 @@ public class TDDTMenuBar {
     }
 
     private void loadTemplateView() throws IOException{
-        FXMLLoader startloader = new FXMLLoader(getClass().getResource("load.fxml"));
+        FXMLLoader startloader = new FXMLLoader(getClass().getResource("TDDT/WindowLoad/load.fxml"));
         Parent loadroot = startloader.load();
         Main.Bp.setCenter(loadroot);
     }
