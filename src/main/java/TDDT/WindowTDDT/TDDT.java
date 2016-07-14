@@ -19,7 +19,7 @@ public class TDDT {
         this.Task = p;
         System.out.println(p.code + p.test); //Debug Project übergabe
         try{
-            FXMLLoader mainloader = new FXMLLoader(getClass().getResource("sample.fxml"));
+            FXMLLoader mainloader = new FXMLLoader(getClass().getResource("../sample.fxml"));
             Parent mainparent = mainloader.load();
             Main.Bp.setCenter(mainparent);
             TDDTController tcontroller = mainloader.getController();
@@ -31,7 +31,7 @@ public class TDDT {
     public String getCode(){
         String s ="";
         try{
-            FXMLLoader mainloader = new FXMLLoader(getClass().getResource("sample.fxml"));
+            FXMLLoader mainloader = new FXMLLoader(getClass().getResource("../sample.fxml"));
             Parent mainparent = mainloader.load();
             Main.Bp.setCenter(mainparent);
             TDDTController tcontroller = mainloader.getController();
@@ -43,7 +43,7 @@ public class TDDT {
     public String getTest(){
         String s ="";
         try{
-            FXMLLoader mainloader = new FXMLLoader(getClass().getResource("sample.fxml"));
+            FXMLLoader mainloader = new FXMLLoader(getClass().getResource("../sample.fxml"));
             Parent mainparent = mainloader.load();
             Main.Bp.setCenter(mainparent);
             TDDTController tcontroller = mainloader.getController();

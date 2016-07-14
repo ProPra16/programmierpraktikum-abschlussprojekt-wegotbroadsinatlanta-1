@@ -1,5 +1,8 @@
 package TDDT.Time;
 
+import javafx.scene.control.Label;
+import javafx.scene.text.Text;
+
 /**
  * Created by Felix Kerlin on 6/28/2016.
  * Multithreading from http://www.tutorialspoint.com/java/java_multithreading.htm
@@ -10,10 +13,12 @@ public class timer implements Runnable{
     private boolean running = false;
     private Thread timerThread;
     private String timeLeft;
+    private Label field;
 
-    public timer(int interval){
+    public timer(int interval, Label textfield){
         timerInterval = (interval + 1) * 1000;
         System.out.println("Creating Timer");
+        field = textfield;
     }
 
     public void start(){
@@ -70,5 +75,6 @@ public class timer implements Runnable{
 
     private void out(){
         System.out.println(timeLeft);
+        field.setText("Zeit übrig: " + String.valueOf(timeTools.msToText(fmsLeft())));
     }
 }

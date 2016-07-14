@@ -15,7 +15,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
 
-public class Main extends Application {
+public class  Main extends Application {
     public Stage primaryStage = new Stage();
     public static TDDTController tcontroller;
     public static BorderPane Bp;

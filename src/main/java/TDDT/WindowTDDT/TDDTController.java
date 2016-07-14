@@ -1,5 +1,6 @@
 package TDDT.WindowTDDT;
 
+import TDDT.Time.*;
 import TDDT.DEBUG;
 import TDDT.Compiler.*;
 import TDDT.Main;
@@ -30,7 +31,8 @@ public class TDDTController implements Initializable{
     private Label errorcounter;
     @FXML
     private Label status;
-
+    @FXML
+    private Label babystepCounter;
 
     String tempCode = "";
 
@@ -91,8 +93,6 @@ public class TDDTController implements Initializable{
             "\n" +
             "}\n" +
             "\n";
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -180,6 +180,8 @@ public class TDDTController implements Initializable{
             }
         }
         }
+        timer time = new timer(200, babystepCounter);
+        time.start();
     }
 
     //-----API----------------------------
@@ -195,6 +197,5 @@ public class TDDTController implements Initializable{
     public String getRightTextArea(){
         return fieldred.getText();
     }
-
 
 }

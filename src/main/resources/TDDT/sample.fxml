@@ -10,7 +10,7 @@
 <GridPane fx:controller="TDDT.WindowTDDT.TDDTController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" >
 
     <stylesheets>
-        <URL value="@mainstyle.css" />
+        <URL value="@../mainstyle.css" />
     </stylesheets>
 
     <Label fx:id="status" GridPane.columnIndex="0" GridPane.rowIndex="0" Text="STATUS" />
@@ -29,5 +29,6 @@
     </Button>
 
     <Label fx:id="errorcounter" GridPane.columnIndex="3" GridPane.columnSpan="1" GridPane.rowIndex="2" Text="Fehler in Tests:"/>
+    <Label fx:id="babystepCounter" GridPane.columnIndex="4" GridPane.columnSpan="1" GridPane.rowIndex="2" Text="Zeit übrig: "/>
 
 </GridPane>
