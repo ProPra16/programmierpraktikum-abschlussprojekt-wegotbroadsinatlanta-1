@@ -20,10 +20,11 @@ public class LoadController implements Initializable{       //Design des FXML mu
     @FXML private ListView list;
     @FXML Button startTDDT;
     private int currentselection;
+    public ArrayList<Aufgabe> kat;
     ObservableList<String> items = FXCollections.observableArrayList (); ///Die Aufgabenstellungen müssen noch eingefügt werden
 
     public void initialize(URL url, ResourceBundle rb){
-        ArrayList<Aufgabe> kat = new FileIO.Einlesen().lesen();
+        kat = new FileIO.Einlesen().lesen();
         for(int i = 0;i<kat.size();i++){items.add(i,kat.get(i).name);}
         list.setItems(items);
         list.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {       // Auswahl ohne Select Button
@@ -43,7 +44,7 @@ public class LoadController implements Initializable{       //Design des FXML mu
 
     public void startTDDT(){
         Main.self.Bp.setCenter(Main.self.root);
-        loadTask("code","test","23",true,true);
+        loadTask(kat.get(currentselection).aufgabeklassen,kat.get(currentselection).aufgabetests,kat.get(currentselection).name,kat.get(currentselection).config.babystep.value,kat.get(currentselection).config.timetracking);
     }
 
     public void loadTask(String code, String test, String taskname, boolean babysteps, boolean Timetracking){
