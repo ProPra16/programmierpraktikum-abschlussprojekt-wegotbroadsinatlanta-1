@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827a91df-5d52-471f-988c-f99c8934c1eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/FileIO/catalog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/FileIO/Aufgabe.class" afterPath="$PROJECT_DIR$/build/classes/main/FileIO/Aufgabe.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/FileIO/AufgabeBlock.class" afterPath="$PROJECT_DIR$/build/classes/main/FileIO/AufgabeBlock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/FileIO/BabystepConfig.class" afterPath="$PROJECT_DIR$/build/classes/main/FileIO/BabystepConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/FileIO/Config.class" afterPath="$PROJECT_DIR$/build/classes/main/FileIO/Config.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/FileIO/FileIO.class" afterPath="$PROJECT_DIR$/build/classes/main/FileIO/FileIO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/LoadController$1.class" afterPath="$PROJECT_DIR$/build/classes/main/LoadController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/LoadController.class" afterPath="$PROJECT_DIR$/build/classes/main/LoadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/FileIO/Einlesen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/load.fxml" afterPath="$PROJECT_DIR$/build/resources/main/load.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/Aufgabe.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/Aufgabe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/AufgabeBlock.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/AufgabeBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/Config.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/FileIO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/FileIO/Project.java" afterPath="$PROJECT_DIR$/src/main/java/FileIO/Project.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/LoadController.java" afterPath="$PROJECT_DIR$/src/main/java/LoadController.java" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,17 +33,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LoadController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoadController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/LoadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Einlesen.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Einlesen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/FileIO/Einlesen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -559,6 +543,14 @@
       <option name="presentableId" value="Default" />
       <updated>1468527326183</updated>
     </task>
+    <task id="LOCAL-00001" summary="neue Klasse fürs einlesen, weil es mit der alten probleme gab&#10;und im loadkontroller eingebaut">
+      <created>1468528133051</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1468528133051</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -595,6 +587,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="neue Klasse fürs einlesen, weil es mit der alten probleme gab&#10;und im loadkontroller eingebaut" />
+    <option name="LAST_COMMIT_MESSAGE" value="neue Klasse fürs einlesen, weil es mit der alten probleme gab&#10;und im loadkontroller eingebaut" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -604,14 +600,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/LoadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -672,6 +660,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LoadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
           <folding />
         </state>
       </provider>
