@@ -1,8 +1,7 @@
-package TDDT.Compiler;
-
-import TDDT.Main;
-import TDDT.DEBUG;
+import FileIO.Project;
 import vk.core.api.*;
+import vk.core.internal.InternalCompiler;
+import java.util.ArrayList;
 
 /**
  * Created by Lionel on 05.07.2016.
@@ -10,8 +9,8 @@ import vk.core.api.*;
 public class Compile {  // Verknüpft mit API KATA von Bendisposto
     String outmessage = "";
     public Compile(){
-        DEBUG.out("Starting TDDT.WindowTDDT.TDDT.Compiler");
-        Main.self.TDDTStatusBar.output.setText("Starting TDDT.WindowTDDT.TDDT.Compiler...");
+        DEBUG.out("Starting Compiler");
+        Main.self.statusBar.output.setText("Starting Compiler...");
     }
 
     public static CompilationResult compileCodeandTest(String className1,String code1, boolean isTest1,String className2,String code2, boolean isTest2){
@@ -33,7 +32,7 @@ public class Compile {  // Verknüpft mit API KATA von Bendisposto
     }
 
     public static CompilationResult compileCode(String className,String code, boolean isTest){
-        DEBUG.out("Starting TDDT.WindowTDDT.TDDT.Compiler with, Classname: " + className + ", isTest: " + isTest);
+        DEBUG.out("Starting Compiler with, Classname: " + className + ", isTest: " + isTest);
         CompilationUnit ComUnit = new CompilationUnit(className,code,isTest);
         JavaStringCompiler compiler = CompilerFactory.getCompiler(ComUnit);
         compiler.compileAndRunTests();

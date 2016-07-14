@@ -9,6 +9,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.KeyCombination;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -48,8 +49,10 @@ public class TDDTMenuBar {
     }
 
     private void settingsView() throws IOException{
-        FXMLLoader settingsloader = new FXMLLoader(getClass().getResource("settings.fxml"));  // Design ----> Ando
+        /*FXMLLoader settingsloader = new FXMLLoader(getClass().getResource("settings.fxml"));  // Design ----> Ando
         Parent loadsettings = settingsloader.load();
-        Main.Bp.setCenter(loadsettings);
+        Main.Bp.setCenter(loadsettings);*/
+        Stage settings = new Stage();
+        settings.show();
     }
 }
