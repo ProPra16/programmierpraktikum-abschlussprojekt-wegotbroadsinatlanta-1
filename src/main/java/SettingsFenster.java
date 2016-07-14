@@ -36,7 +36,7 @@ public class SettingsFenster {
 
         beenden = new Button("Beenden");
         beenden.setOnAction(e -> {
-            TDDTMenuBar.settings.close();
+            //TDDTMenuBar.settings.close();
 
         });
         layout.getChildren().add(beenden);

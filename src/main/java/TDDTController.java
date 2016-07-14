@@ -1,8 +1,11 @@
+import Fensterdesigns.FinalWindow;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import org.fxmisc.richtext.CodeArea;
 import org.fxmisc.richtext.LineNumberFactory;
 import org.fxmisc.richtext.StyleSpans;
@@ -62,6 +65,19 @@ public class TDDTController implements Initializable{
                 .subscribe(change -> {
                     fieldred.setStyleSpans(0, computeHighlighting(fieldred.getText()));
                 });
+    }
+
+    public void startStatistik(){               /////// Anmerkung:::: FELIX Statistik Daten von Babystep und Timetracking bitte einfügen
+        DEBUG.out("Launch startistic");
+        double red = 0.4;       ///Hier einfügen
+        double green = 0.6;
+        double oragne = 0.2;
+        Stage statistik = new Stage();
+        statistik.setTitle("Andranischer Graph");
+        FinalWindow ds = new FinalWindow();
+        Scene s = ds.getchart(red,green,oragne);
+        statistik.setScene(s);
+        statistik.show();
     }
 
     public void setLabel(Label l,String s, Color c){

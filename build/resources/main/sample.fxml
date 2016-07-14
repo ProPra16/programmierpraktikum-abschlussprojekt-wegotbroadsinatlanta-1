@@ -15,6 +15,7 @@
             <Label fx:id="errorcounter" Text="Fehler in Tests:"/>
             <Button fx:id="runbutton" onAction="#run"/>
             <Button fx:id="switchbutton" onAction="#switchField"/>
+            <Button fx:id="Statistik" onAction="#startStatistik"/>
         </HBox>
     <CodeArea fx:id="fieldgreen"
               GridPane.columnIndex="1" GridPane.rowIndex="1" id="fieldgreen" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS"/>
