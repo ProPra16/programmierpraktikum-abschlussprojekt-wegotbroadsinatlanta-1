@@ -22,10 +22,6 @@ public class Zeiteinteilung extends Application{
         this.differenz = this.endZeit - this. startZeit;
     }
 
-    public void getzeit(){
-
-    }
-
     @Override
     public void start(Stage primarystage){
 
