@@ -10,12 +10,12 @@ public class FileIO {
     private static BufferedReader reader;
     private static String filename = "./catalog.txt";
 
-    public static void writeKatalog(ArrayList<Aufgabe> katalog) {
+    /*public static void writeKatalog(ArrayList<Aufgabe> katalog) {
         try {
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename), "utf-8"));
             writer.write(getTag("excercises", true));
-            for(int i=0; i < 1/*katalog.size()*/; i++) {
-                Aufgabe aktuelleAufgabe = new Aufgabe();
+            for(int i=0; i < 1/*katalog.size()*/; //i++) {
+      /*          Aufgabe aktuelleAufgabe = new Aufgabe();
                 //test code
                 AufgabeBlock a = new AufgabeBlock("hallo welt", "public class RomanNumberConverter {\n" +
                         "}");
@@ -30,21 +30,21 @@ public class FileIO {
                 aktuelleAufgabe.aufgabetests.add(test);
 
                 //bis hier
-                writer.write(getXMLOneValue("excercise", "name", "ando"/*aktuelleAufgabe.name*/, true));
-                writer.write(getTag("description", true));
-                writer.write("teste description"/*aktuelleAufgabe.description*/);
-                writer.write(getTag("description", false));
-                for(int j=0; j < 1/*aktuelleAufgabe.aufgabeklassen.size()*/; j++) {
-                    writer.write(getXMLArray("classes", "class", aktuelleAufgabe.aufgabeklassen));
+                writer.write(getXMLOneValue("excercise", "name", "ando"/*aktuelleAufgabe.name*///, true));
+        /*        writer.write(getTag("description", true));
+                writer.write("teste description"/*aktuelleAufgabe.description*///);
+          /*      writer.write(getTag("description", false));
+                for(int j=0; j < 1/*aktuelleAufgabe.aufgabeklassen.size()*/; //j++) {
+            /*        writer.write(getXMLArray("classes", "class", aktuelleAufgabe.aufgabeklassen));
                 }
-                for(int k=0; k < 1/*aktuelleAufgabe.aufgabetests.size()*/; k++) {
-                    writer.write(getXMLArray("tests", "test", aktuelleAufgabe.aufgabetests));
+                for(int k=0; k < 1/*aktuelleAufgabe.aufgabetests.size()*/; //k++) {
+              /*      writer.write(getXMLArray("tests", "test", aktuelleAufgabe.aufgabetests));
                 }
                 writer.write(getTag("config", true));
                 if(aktuelleAufgabe.config.babystep.value = true) writer.write(getXMLWithValueAndTime("babysteps", aktuelleAufgabe.config.babystep.value, aktuelleAufgabe.config.babystep.time));
-                else writer.write(getXMLOneValue("babysteps", "value", "true"/*aktuelleAufgabe.config.babystep.value*/, false));
-                writer.write(getXMLOneValue("timetracking", "value", "yeah"/*aktuelleAufgabe.config.timetracking*/, false));
-                writer.write(getTag("config", false));
+                else writer.write(getXMLOneValue("babysteps", "value", "true"/*aktuelleAufgabe.config.babystep.value*///, false));
+                /*writer.write(getXMLOneValue("timetracking", "value", "yeah"/*aktuelleAufgabe.config.timetracking*///, false));
+             /*   writer.write(getTag("config", false));
                 writer.write(getTag("excercise", false));
             }
             writer.write(getTag("excercises", false));
@@ -158,5 +158,5 @@ public class FileIO {
     private static String getTag(String tag, boolean open){
         if (open) return "<" + tag + ">\n";
         return "</" + tag + ">\n";
-    }
+    }*/
 }

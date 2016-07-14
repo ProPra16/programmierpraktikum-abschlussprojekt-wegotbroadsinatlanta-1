@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class Aufgabe {
     public String name = "";
     public String description = "";
-    public ArrayList<AufgabeBlock> aufgabeklassen = new ArrayList<AufgabeBlock>();
-    public ArrayList<AufgabeBlock> aufgabetests = new ArrayList<AufgabeBlock>();
+    public String aufgabeklassen;
+    public String aufgabetests;
     public Config config = new Config();
 
 }

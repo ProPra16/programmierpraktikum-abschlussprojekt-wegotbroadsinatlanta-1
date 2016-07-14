@@ -1,3 +1,4 @@
+import FileIO.Aufgabe;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -8,6 +9,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 
 import java.net.URL;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -17,9 +20,11 @@ public class LoadController implements Initializable{       //Design des FXML mu
     @FXML private ListView list;
     @FXML Button startTDDT;
     private int currentselection;
-    ObservableList<String> items = FXCollections.observableArrayList ("Aufgabe: 1", "Aufgabe: 2"); ///Die Aufgabenstellungen müssen noch eingefügt werden
+    ObservableList<String> items = FXCollections.observableArrayList (); ///Die Aufgabenstellungen müssen noch eingefügt werden
 
     public void initialize(URL url, ResourceBundle rb){
+        ArrayList<Aufgabe> kat = new FileIO.Einlesen().lesen();
+        for(int i = 0;i<kat.size();i++){items.add(i,kat.get(i).name);}
         list.setItems(items);
         list.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {       // Auswahl ohne Select Button
             @Override
