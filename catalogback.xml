@@ -1,7 +1,7 @@
 <excercises>
     <excercise name="Leap Year">
         <description>Gegeben ist ein Programm LeapYear, das berechnet,
-ob ein gegebenes Jahr ein Schaltjahr ist.Schreiben
+ob ein gegebenes Jahr ein Schaltjahr ist. Schreiben
 Sie eine JUnit-Testklasse, die die Funktion isLeapYear
 testet. Achten Sie darauf, jeden m̈oglichen Fall durch
 mindestens einen Test abzudecken. Schreiben Sie zus̈atzlich
@@ -42,12 +42,36 @@ public class RomanNumbersTest{
 
 @Test
 public void testSomething(){
-            
+
     }
 }</test></tests>
         <config>
             <babysteps value="False" />
             <timetracking value="True" />
         </config>
+    </excercise>
+    <excercise name="Minesweeper">
+        <description>Schreiben Sie ein Programm Minesweeper1, das eine
+quadratische Matrix von Nullen und Einsen übergeben bekommt. Einsen
+repräsentieren dabei Felder, unter denen eine Mine liegt. Ihr Programm
+soll für jedes Feld ausrechnen, wieviele Felder mit einer Mine angrenzen.
+Das Programm soll die Anzahl der angrenzenden Minen für jedes Feld ausgeben.
+Für Felder unter denen eine Mine ist, soll -1 ausgegeben werden.</description><classes><class name="Minesweeper">public class Minesweeper1 {
+
+public static void main(String[] args) {
+// Implementieren Sie Ihre Loesung hier
+    }
+}</class> </classes>
+    <tests><test name="MinesweeperTest"></test>import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class MinesweeperTest{
+
+@Test
+public void testSomething(){
+
+    }
+ }</tests><config><babysteps value="False" />
+    <timetracking value="True" /></config>
     </excercise>
 </excercises>
