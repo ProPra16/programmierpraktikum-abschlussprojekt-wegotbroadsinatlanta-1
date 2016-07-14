@@ -1,55 +1,50 @@
 <excercises>
     <excercise name="Leap Year">
-        <description>
-            Gegeben ist ein Programm LeapYear, das berechnet, ob ein gegebenes Jahr ein Schalt-
-            jahr ist. Schreiben Sie eine JUnit-Testklasse, die die Funktion isLeapYear testet. Achten
-            Sie darauf, jeden m ̈oglichen Fall durch mindestens einen Test abzudecken. Schreiben Sie
-            zus ̈atzlich zwei redundante Tests, also Tests, die einen Fall abdecken, der eigentlich bereits
-            abgedeckt wurde.
+        <description>Gegeben ist ein Programm LeapYear, das berechnet,
+ob ein gegebenes Jahr ein Schaltjahr ist.Schreiben
+Sie eine JUnit-Testklasse, die die Funktion isLeapYear
+testet. Achten Sie darauf, jeden m̈oglichen Fall durch
+mindestens einen Test abzudecken. Schreiben Sie zus̈atzlich
+zwei redundante Tests, also Tests, die einen Fall abdecken,
+der eigentlich bereitsabgedeckt wurde.
         </description>
         <classes>
-            <class name="LeapYear">
-                public class LeapYear{
-                public static boolean isLeapYear(int year) {
+            <class name="LeapYear">public class LeapYear{
 
-                return false;
-                }
-                }
-            </class>
+public static boolean isLeapYear(int year) {
+
+return false;
+    }
+}</class>
         </classes>
-        <tests>
-            <test name="LeapYearTest">
-                import static org.junit.Assert.*;
-                import org.junit.*;
+        <tests><test name="LeapYearTest">import static org.junit.Assert.*;
+import org.junit.*;
 
-                public class LeapYearTest{
+public class LeapYearTest{
 
-                }
-            </test>
-        </tests>
+}</test></tests>
         <config>
             <babysteps value="False" />
             <timetracking value="True" />
         </config>
     </excercise>
     <excercise name="Römische Zahlen">
-        <description>Konvertiert arabische in römische Zahlen.</description>
+        <description>Konvertiert arabische in römische Zahlen.
+        </description>
         <classes>
-            <class name="RomanNumberConverter">
-                public class RomanNumberConverter {
-                }
-            </class>
-        </classes>
-        <tests>
-<test name="RomanNumberConverterTest">import static org.junit.Assert.*;
+            <class name="RomanNumberConverter">public class RomanNumberConverter {
+
+}</class></classes>
+        <tests><test name="RomanNumberConverterTest">import static org.junit.Assert.*;
 import org.junit.Test;
+
 public class RomanNumbersTest{
+
 @Test
 public void testSomething(){
-}
-}
-            </test>
-        </tests>
+            
+    }
+}</test></tests>
         <config>
             <babysteps value="False" />
             <timetracking value="True" />

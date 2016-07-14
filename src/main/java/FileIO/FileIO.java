@@ -1,14 +1,12 @@
 package FileIO;
 
 import java.io.*;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 public class FileIO {
 
     private static Writer writer;
     private static BufferedReader reader;
-    private static String filename = "./catalog.txt";
+    private static String filename = "catalog2.txt";
 
     /*public static void writeKatalog(ArrayList<Aufgabe> katalog) {
         try {
