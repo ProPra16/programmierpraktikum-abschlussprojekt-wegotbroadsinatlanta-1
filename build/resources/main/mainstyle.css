@@ -5,7 +5,11 @@ root {
 #grid{
     -fx-background-color:"#333";
 }
-
+#status{
+    -fx-font-family: 'Helvetica Neue', sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size:1em;
+}
 #field-red{
     -fx-text-box-border: red ;
     -fx-focus-color: red ;
