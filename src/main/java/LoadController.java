@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 
 import java.net.URL;
 import java.util.ArrayDeque;
@@ -19,12 +20,15 @@ import java.util.ResourceBundle;
 public class LoadController implements Initializable{       //Design des FXML muss überarbeitet werden  ---> Ando
     @FXML private ListView list;
     @FXML Button startTDDT;
+    @FXML
+    TextArea description;
     private int currentselection;
     public ArrayList<Aufgabe> kat;
     ObservableList<String> items = FXCollections.observableArrayList (); ///Die Aufgabenstellungen müssen noch eingefügt werden
 
     public void initialize(URL url, ResourceBundle rb){
         kat = new FileIO.Einlesen().lesen();
+        description.setEditable(false);
         for(int i = 0;i<kat.size();i++){items.add(i,kat.get(i).name);}
         list.setItems(items);
         list.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {       // Auswahl ohne Select Button
@@ -32,6 +36,8 @@ public class LoadController implements Initializable{       //Design des FXML mu
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 currentselection = getIndex(newValue);
                 DEBUG.out("Selected item at index: " + currentselection);
+                description.setText(kat.get(currentselection).description);
+
             }
         });
     }
