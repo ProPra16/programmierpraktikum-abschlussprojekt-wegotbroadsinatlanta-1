@@ -8,6 +8,8 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
+//Inspiriert durch Quelle:  http://docs.oracle.com/javafx/2/charts/bar-chart.htm#CIHJFHDE
+
 public class Chart extends Application {
     static double redprozent;
     static double greenprozent;

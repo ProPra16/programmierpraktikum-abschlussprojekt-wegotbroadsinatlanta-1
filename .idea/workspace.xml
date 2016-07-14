@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="706f41d0-cb40-42a6-b490-14bdef557820" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/report.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Fenster.java" afterPath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Fenster.java" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,11 +46,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+<<<<<<< Updated upstream
       <file leaf-file-name="Chart.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="327">
               <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+=======
+      <file leaf-file-name="Chart.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DesignCheckBox.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DesignCheckBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#1043#1058#0" expanded="true" />
               </folding>
@@ -482,6 +504,32 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="programmierpraktikum-abschlussprojekt-wegotbroadsinatlanta-1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="programmierpraktikum-abschlussprojekt-wegotbroadsinatlanta-1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Time" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wegotbroadsinatlanta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1129,7 +1177,25 @@
       <option name="project" value="LOCAL" />
       <updated>1468503798341</updated>
     </task>
+<<<<<<< Updated upstream
     <option name="localTasksCounter" value="33" />
+=======
+    <task id="LOCAL-00033" summary="Settings">
+      <created>1468520977242</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1468520977242</updated>
+    </task>
+    <task id="LOCAL-00034" summary="DesignCheckBox und TDDTMenuBar verknüpft;&#10;dazu notwendige Veränderungen durchgenommen, die das System verbessern und einfacher bei Vergaben machen">
+      <created>1468523200785</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1468523200785</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
+>>>>>>> Stashed changes
     <servers />
   </component>
   <component name="TodoView">
@@ -1142,7 +1208,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1210,8 +1276,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< Updated upstream
     <MESSAGE value="&#10;jm" />
     <MESSAGE value="Created Loadstage&#10;" />
+=======
+>>>>>>> Stashed changes
     <MESSAGE value="&#10;" />
     <MESSAGE value="&#10;testcopycommit&#10;" />
     <MESSAGE value="Added Loading screen, and selectable Listview for the tasks" />
@@ -1235,7 +1304,13 @@
     <MESSAGE value="Konstruktor und Überarbeitung getätigt ++++++++AndranikSar +++++++ thosch777" />
     <MESSAGE value="Verknüpfen, kleine Bearbeitungen bezüglich Konstruktor und Übergabe" />
     <MESSAGE value="Design überarbeitet und Veränderung des Öffnens für die Statistik" />
+<<<<<<< Updated upstream
     <option name="LAST_COMMIT_MESSAGE" value="Design überarbeitet und Veränderung des Öffnens für die Statistik" />
+=======
+    <MESSAGE value="Settings" />
+    <MESSAGE value="DesignCheckBox und TDDTMenuBar verknüpft;&#10;dazu notwendige Veränderungen durchgenommen, die das System verbessern und einfacher bei Vergaben machen" />
+    <option name="LAST_COMMIT_MESSAGE" value="DesignCheckBox und TDDTMenuBar verknüpft;&#10;dazu notwendige Veränderungen durchgenommen, die das System verbessern und einfacher bei Vergaben machen" />
+>>>>>>> Stashed changes
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1248,6 +1323,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/LoadStage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1382,6 +1458,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1534,7 +1612,31 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesign/Fesnter3.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/DEBUG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Fenster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/GetZeit.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/TDDTController.java">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
@@ -1549,6 +1651,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/TDDTMenuBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -1556,6 +1659,10 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Maintest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Fenster3.fxml" />
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1615,7 +1722,19 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/LoadStage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TDDTMenuBar.java">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
@@ -1625,15 +1744,38 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Fenster.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="811">
           <caret line="54" column="70" selection-start-line="54" selection-start-column="70" selection-end-line="54" selection-end-column="70" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/Time/timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DesignCheckBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#607#608#0" expanded="true" />
             <element signature="e#635#636#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
