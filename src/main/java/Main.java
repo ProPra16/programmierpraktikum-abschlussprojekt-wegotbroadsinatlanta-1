@@ -34,6 +34,7 @@ public class Main extends Application {
         statusBar = new StatusBar();
         Bp.setBottom(statusBar);
         Scene mainScene = new Scene(Bp,width,heigth);
+        root.getStylesheets().add("java-keywords.css");
         primaryStage.setTitle("TDDT");
         primaryStage.setScene(mainScene);
         primaryStage.show();

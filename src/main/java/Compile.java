@@ -1,7 +1,6 @@
 import FileIO.Project;
 import vk.core.api.*;
 import vk.core.internal.InternalCompiler;
-
 import java.util.ArrayList;
 
 /**

@@ -1,17 +1,23 @@
 root {
     display: block;
+
+}
+#grid{
+    -fx-background-color:"#333";
 }
 
 #field-red{
     -fx-text-box-border: red ;
     -fx-focus-color: red ;
     -fx-shadow-highlight-color: red;
+    -fx-background-color:"#2B2B2B";
 }
 
 #fieldgreen{
     -fx-text-box-border: green ;
     -fx-focus-color: green ;
     -fx-shadow-highlight-color: green;
+    -fx-background-color:"#2B2B2B";
 }
 #runbutton{
     -fx-pref-width:50;
@@ -28,3 +34,6 @@ root {
     -fx-background-repeat: no-repeat;
     -fx-background-position:center;
 }
+
+
+
