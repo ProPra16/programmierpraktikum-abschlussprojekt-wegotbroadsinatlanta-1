@@ -35,6 +35,6 @@ public class Zeiteinteilung extends Application{
         //alert.setTitle("Deine Zeit");
         //alert.setHeaderText("Du hast insgesamt " + differenz + " Sekunden benötigt.");
         //alert.show();
-        //}
+        }
 
 }
