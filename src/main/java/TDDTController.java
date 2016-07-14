@@ -126,14 +126,6 @@ public class TDDTController implements Initializable{
         l.setText(s);
         l.setTextFill(c);
     }
-    /*
-    ---------------------------------------------------
-    benötigte Klassen:
-        getClass() - returnt String mit Namen der aktuellen Klasse für das das Programm testet
-        getTestClass() - ^^^^^^^^
-
-    ---------------------------------------------------
-     */
 
     public String findClassName(String code){
         String classname = code.substring(code.indexOf("class") + 6,code.indexOf("{")); //getclass() methode falls nicht in IO implementiert wird
@@ -142,8 +134,6 @@ public class TDDTController implements Initializable{
     }
     public void run(){
         Compile Compile = new Compile();
-        //CompilationResult result = Compile.compileCode(findClassName(leapyearcode),leapyearcode,false);
-        //CompilationResult result = Compile.compileCodeandTest(findClassName(leapyearcode),leapyearcode,false,findClassName(leapyeartest),leapyeartest,true);
         try{
             if(testMode){
                 //TestClassCompilen
