@@ -32,7 +32,9 @@ public class TDDTController implements Initializable{
     @FXML
     private Label status;
     @FXML
-    private Label babystepCounter;
+    public Label babystepCounter;
+
+    public static TDDTController self;
 
     String tempCode = "";
 
@@ -104,6 +106,7 @@ public class TDDTController implements Initializable{
             fieldgreen.setEditable(false);
             switchbutton.setDisable(true);
         }
+        self = this;
     }
 
     public void setLabel(Label l,String s, Color c){
@@ -180,8 +183,9 @@ public class TDDTController implements Initializable{
             }
         }
         }
-        timer time = new timer(200, babystepCounter);
-        time.start();
+        //timer time = new timer(200, babystepCounter);
+        //time.start();
+        timer2 t = new timer2();
     }
 
     //-----API----------------------------

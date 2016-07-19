@@ -1,7 +1,7 @@
 package TDDT.Time;
 
+import javafx.application.Platform;
 import javafx.scene.control.Label;
-import javafx.scene.text.Text;
 
 /**
  * Created by Felix Kerlin on 6/28/2016.
@@ -27,8 +27,25 @@ public class timer implements Runnable{
         running = true;
         timeLeft = fTimeLeft();
         if (timerThread == null) {
-            timerThread = new Thread(this, "Timer");
-            timerThread.start();
+            System.out.println("1");
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println("Running Timer");
+                    while (running){
+                        running = checkNotFinished();
+                        if (!running) return;
+                        timeLeft = fTimeLeft();
+                        out();
+                        running = checkNotFinished();
+                        try {
+                            timerThread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            //placeholder
+                        }
+                    }
+                }
+            });
         }
     }
 
