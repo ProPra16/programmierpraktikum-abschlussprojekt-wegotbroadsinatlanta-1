@@ -23,12 +23,13 @@ public class  Main extends Application {
     public static int width = 1400;
     public static int heigth = 1000;
     public TDDTStatusBar TDDTStatusBar;
+    public Parent root;
     @Override
 
     public void start(Stage primaryStage2) throws Exception{
         DEBUG.out("Launch Application");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
-        Parent root = loader.load();
+        root = loader.load();
         tcontroller = loader.getController();
 
 

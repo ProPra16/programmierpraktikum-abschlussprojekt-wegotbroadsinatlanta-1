@@ -1,14 +1,17 @@
 package TDDT.WindowTDDT;
 
+import TDDT.DesignCheckBox;
 import TDDT.DEBUG;
 import TDDT.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.KeyCombination;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -16,6 +19,8 @@ import java.io.IOException;
  * Created by Lionel on 01.07.2016.
  */
 public class TDDTMenuBar {
+
+    public static Stage settings;
 
     public MenuBar TopMenu(){
         MenuBar mBar = new MenuBar();
@@ -48,8 +53,14 @@ public class TDDTMenuBar {
     }
 
     private void settingsView() throws IOException{
-        FXMLLoader settingsloader = new FXMLLoader(getClass().getResource("settings.fxml"));  // Design ----> Ando
+        /*FXMLLoader settingsloader = new FXMLLoader(getClass().getResource("settings.fxml"));  // Design ----> Ando
         Parent loadsettings = settingsloader.load();
-        Main.Bp.setCenter(loadsettings);
+        Main.Bp.setCenter(loadsettings);*/
+        settings = new Stage();
+        settings.setTitle("Feature-Einstellungen");
+        DesignCheckBox ds = new DesignCheckBox();
+        Scene s = ds.DesignCheckBox();
+        settings.setScene(s);
+        settings.show();
     }
 }

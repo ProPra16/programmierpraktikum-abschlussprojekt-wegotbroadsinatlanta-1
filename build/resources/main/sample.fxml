@@ -1,0 +1,25 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import org.fxmisc.richtext.CodeArea?>
+<?import javafx.scene.layout.HBox?>
+<GridPane fx:id="grid" fx:controller="TDDTController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" >
+
+    <stylesheets>
+        <URL value="@mainstyle.css" />
+    </stylesheets>
+
+    <Label fx:id="status" GridPane.columnIndex="1" GridPane.rowIndex="0" Text="STATUS" />
+        <HBox GridPane.columnIndex="2" GridPane.rowIndex="0" alignment="BASELINE_RIGHT" spacing="10">
+            <Label fx:id="errorcounter" Text="Fehler in Tests:"/>
+            <Button fx:id="runbutton" onAction="#run"/>
+            <Button fx:id="switchbutton" onAction="#switchField"/>
+            <Button fx:id="Statistik" onAction="#startStatistik"/>
+        </HBox>
+    <CodeArea fx:id="fieldgreen"
+              GridPane.columnIndex="1" GridPane.rowIndex="1" id="fieldgreen" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS"/>
+    <CodeArea
+            GridPane.columnIndex="2" GridPane.rowIndex="1" id="field-red" fx:id="fieldred" GridPane.hgrow="ALWAYS"/>
+
+</GridPane>

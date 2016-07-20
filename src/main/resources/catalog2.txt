@@ -1,0 +1,59 @@
+<excercises>
+  <exercise name="Leap Year">
+    <description>
+	Gegeben ist ein Programm LeapYear, das berechnet, ob ein gegebenes Jahr ein Schalt-
+	jahr ist. Schreiben Sie eine JUnit-Testklasse, die die Funktion isLeapYear testet. Achten
+	Sie darauf, jeden moeglichen Fall durch mindestens einen Test abzudecken. Schreiben Sie
+	zus̈atzlich zwei redundante Tests, also Tests, die einen Fall abdecken, der eigentlich bereits
+	abgedeckt wurde.
+    </description>
+    <classes>
+      <class name="LeapYear">
+public class LeapYear{
+  public static boolean isLeapYear(int year) {
+
+    return false;
+  }
+}
+      </class>
+    </classes>
+    <tests>
+      <test name="LeapYearTest">
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class LeapYearTest{
+
+}
+      </test>
+    </tests>
+    <config>
+      <babysteps value="False" />
+      <timetracking value="True" />
+    </config>
+  </exercise>
+<exercise name="Roemische Zahlen">
+<description>Konvertiert arabische in roemische Zahlen.</description>
+<classes>
+<class name="RomanNumberConverter">
+public class RomanNumberConverter {
+}
+</class>
+</classes>
+<tests>
+<test name="RomanNumberConverterTest">
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class RomanNumbersTest{
+@Test
+public void testSomething(){
+}
+}
+</test>
+</tests>
+<config>
+<babysteps value="False" />
+<timetracking value="True" />
+</config>
+</exercise>
+</exercises>
