@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.StackPane?>
+<?import org.fxmisc.richtext.CodeArea?>
 <GridPane fx:controller="TDDT.WindowTDDT.TDDTController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" >
 
     <stylesheets>
@@ -15,10 +16,10 @@
 
     <Label fx:id="status" GridPane.columnIndex="0" GridPane.rowIndex="0" Text="STATUS" />
 
-    <TextArea fx:id="fieldgreen"
+    <CodeArea fx:id="fieldgreen"
             GridPane.columnIndex="1" GridPane.rowIndex="1" id="fieldgreen" GridPane.vgrow="ALWAYS"/>
 
-    <TextArea
+    <CodeArea
             GridPane.columnIndex="2" GridPane.rowIndex="1" id="field-red" fx:id="fieldred"/>
 
     <Button
