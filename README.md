@@ -1,7 +1,3 @@
-Als Master Branch bitte den Branch Desiigner nehmen, haben Probleme beim mergen.
-
-Master == Desiigner
-
 Released under Eclipse 1.0 License
 
 ### Travis Build Status
