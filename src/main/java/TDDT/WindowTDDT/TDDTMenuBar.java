@@ -1,6 +1,6 @@
 package TDDT.WindowTDDT;
 
-import TDDT.DesignCheckBox;
+import TDDT.CheckBox.DesignCheckBox;
 import TDDT.DEBUG;
 import TDDT.Main;
 import javafx.event.ActionEvent;
