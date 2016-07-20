@@ -34,6 +34,7 @@ public class TDDTController implements Initializable{
     @FXML
     public Label babystepCounter;
 
+    timer timer;
     public static TDDTController self;
 
     String tempCode = "";
@@ -183,11 +184,14 @@ public class TDDTController implements Initializable{
             }
         }
         }
-        //timer time = new timer(200, babystepCounter);
-        //time.start();
-        timer2 t = new timer2();
+        if (timer != null) timer.stop();
+        timer = new timer(180);
     }
 
+    public void timeOver(){
+        //do revert
+        System.out.println("TIME OVER");
+    }
     //-----API----------------------------
     public void setLeftTextArea(String s){
         fieldgreen.setText(s);
