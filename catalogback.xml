@@ -33,7 +33,7 @@ public class LeapYearTest{
         <description>Konvertiert arabische in römische Zahlen. (Babysteps aktiviert)
         </description>
         <classes>
-            <class name="RomanNumberConverter">public class RomanNumberConverter {
+            <class name="RomanNumberConverter">public class RomanNumberConverter{
 
 }</class></classes>
         <tests><test name="RomanNumberConverterTest">import static org.junit.Assert.*;

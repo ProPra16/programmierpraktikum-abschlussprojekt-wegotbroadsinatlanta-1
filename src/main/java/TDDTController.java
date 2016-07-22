@@ -127,6 +127,7 @@ public class TDDTController implements Initializable{
             fieldred.setEditable(true);
             testMode = true;
             setLabel(status,"TESTMODE",Color.RED);
+            refactor = false;
         }else {
             if (testMode) { //&& !result.hasErrors
                 //Switching to Code
@@ -155,7 +156,12 @@ public class TDDTController implements Initializable{
         DEBUG.out(String.valueOf(babysteps) + " ------------ " + String.valueOf(babytime));
         if (babysteps == true){
             if (timer != null) timer.stop();
-            timer = new babyTimer(babytime);
+            DEBUG.out(String.valueOf(refactor));
+            if (refactor == false) {
+                timer = new babyTimer(babytime);
+            } else {
+                babystepCounter.setText("Keine Zeitbeschränkung in der Refactor-Phase");
+            }
         }
     }
 
