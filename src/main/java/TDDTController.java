@@ -44,6 +44,9 @@ public class TDDTController implements Initializable{
     public static TDDTController self;
     public babyTimer timer;
     public Label babystepCounter;
+
+    @FXML
+    public Button revertButton;
     String backup = "";
     boolean greenBackup;
 
