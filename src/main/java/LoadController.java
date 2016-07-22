@@ -29,6 +29,7 @@ public class LoadController implements Initializable{       //Design des FXML mu
     ObservableList<String> items = FXCollections.observableArrayList (); ///Die Aufgabenstellungen müssen noch eingefügt werden
 
     public void initialize(URL url, ResourceBundle rb){
+        if (Main.tcontroller.timer != null) Main.tcontroller.timer.stop();
         Einlesen e = new Einlesen();
         kat = e.lesen();
         description.setEditable(false);
@@ -53,13 +54,19 @@ public class LoadController implements Initializable{       //Design des FXML mu
 
     public void startTDDT(){
         Main.self.Bp.setCenter(Main.self.root);
-        loadTask(kat.get(currentselection).aufgabeklassen,kat.get(currentselection).aufgabetests,kat.get(currentselection).name,kat.get(currentselection).config.babystep.value,kat.get(currentselection).config.timetracking);
+        loadTask(kat.get(currentselection).aufgabeklassen,kat.get(currentselection).aufgabetests,kat.get(currentselection).name,kat.get(currentselection).config.babystep.value, kat.get(currentselection).config.babystep.time, kat.get(currentselection).config.timetracking);
+        Main.tcontroller.checkBabysteps();
     }
 
-    public void loadTask(String code, String test, String taskname, boolean babysteps, boolean Timetracking){
+    public void loadTask(String code, String test, String taskname, String babysteps, int babyTime, boolean Timetracking){
         Main.tcontroller.setLeftTextArea(code);
         Main.tcontroller.setRightTextArea(test);
-        Main.tcontroller.babysteps = babysteps;
+        if (babysteps.equals("True")) Main.tcontroller.babysteps = true;
+        else {
+            Main.tcontroller.babysteps = false;
+            Main.tcontroller.babystepCounter.setText("Babysteps nicht aktiviert");
+        }
+        Main.tcontroller.babytime = babyTime;
         Main.tcontroller.timetracking = Timetracking;
         Main.self.statusBar.output.setText("Loaded new Template...");
     }

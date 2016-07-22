@@ -25,11 +25,12 @@ public class LeapYearTest{
 }</test></tests>
         <config>
             <babysteps value="False" />
+            <babystepTime value="0"/>
             <timetracking value="True" />
         </config>
     </excercise>
     <excercise name="Römische Zahlen">
-        <description>Konvertiert arabische in römische Zahlen.
+        <description>Konvertiert arabische in römische Zahlen. (Babysteps aktiviert)
         </description>
         <classes>
             <class name="RomanNumberConverter">public class RomanNumberConverter {
@@ -46,7 +47,8 @@ public void testSomething(){
     }
 }</test></tests>
         <config>
-            <babysteps value="False" />
+            <babysteps value="True"/>
+            <babystepTime value="120"/>
             <timetracking value="True" />
         </config>
     </excercise>
@@ -72,6 +74,7 @@ public void testSomething(){
 
     }
  }</tests><config><babysteps value="False" />
-    <timetracking value="True" /></config>
+        <babystepTime value="0"/>
+        <timetracking value="True" /></config>
     </excercise>
 </excercises>

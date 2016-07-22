@@ -1,4 +1,5 @@
 import Fensterdesigns.FinalWindow;
+import FileIO.BabystepConfig;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
@@ -26,6 +27,7 @@ public class TDDTController implements Initializable{
     private boolean refactor = false;
     //****** Timetracking and Babysteps must be implemented by Felix
     public boolean babysteps = false;
+    public int babytime = 0;
     public boolean timetracking = false;
     //******
     public CompilationResult result = null;
@@ -40,6 +42,9 @@ public class TDDTController implements Initializable{
     @FXML
     private Label status;
 
+    public static TDDTController self;
+    public babyTimer timer;
+    public Label babystepCounter;
 
     String tempCode = "";
 
@@ -65,6 +70,8 @@ public class TDDTController implements Initializable{
                 .subscribe(change -> {
                     fieldred.setStyleSpans(0, computeHighlighting(fieldred.getText()));
                 });
+        self = this;
+        checkBabysteps();
     }
 
     public void startStatistik(){               /////// Anmerkung:::: FELIX Statistik Daten von Babystep und Timetracking bitte einfügen
@@ -120,27 +127,40 @@ public class TDDTController implements Initializable{
             fieldred.setEditable(true);
             testMode = true;
             setLabel(status,"TESTMODE",Color.RED);
-        }else{
-            if(testMode){ //&& !result.hasErrors
+        }else {
+            if (testMode) { //&& !result.hasErrors
                 //Switching to Code
                 fieldgreen.setEditable(true);
                 fieldred.setEditable(false);
                 testMode = false;
-                setLabel(status,"CODEMODE",Color.GREEN);
+                setLabel(status, "CODEMODE", Color.GREEN);
                 tempCode = getLeftTextArea();
-            }else{
-            if(result.hasErrors){   //RESETET Code falls Error  und Switch back
-                setLeftTextArea(tempCode);
-                fieldgreen.setEditable(false);
-                fieldred.setEditable(true);
-                testMode = true;
-                setLabel(status,"TESTMODE",Color.RED);
-            }else if(result.hasErrors == false){
-                refactor = true;
-                setLabel(status,"REFACTORING",Color.BLACK);
+            } else {
+                if (result.hasErrors) {   //RESETET Code falls Error  und Switch back
+                    setLeftTextArea(tempCode);
+                    fieldgreen.setEditable(false);
+                    fieldred.setEditable(true);
+                    testMode = true;
+                    setLabel(status, "TESTMODE", Color.RED);
+                } else if (result.hasErrors == false) {
+                    refactor = true;
+                    setLabel(status, "REFACTORING", Color.BLACK);
+                }
             }
         }
+        checkBabysteps();
+    }
+
+    public void checkBabysteps(){
+        DEBUG.out(String.valueOf(babysteps) + " ------------ " + String.valueOf(babytime));
+        if (babysteps == true){
+            if (timer != null) timer.stop();
+            timer = new babyTimer(babytime);
         }
+    }
+
+    public void timeOver(){
+        //do revert
     }
 
     //-----API----------------------------

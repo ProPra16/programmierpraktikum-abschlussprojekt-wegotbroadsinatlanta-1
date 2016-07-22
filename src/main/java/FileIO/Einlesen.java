@@ -35,8 +35,8 @@ public class Einlesen{
                     aufgabe.aufgabeklassen = element.getElementsByTagName("class").item(0).getTextContent();
                     aufgabe.aufgabetests = element.getElementsByTagName("tests").item(0).getTextContent();
                     aufgabe.config.babystep = new BabystepConfig();
-                    //aufgabe.config.babystep.time = element.getElementsByTagName("babysteps").item(0).getAttributes().getNamedItem("time").getTextContent();
-                    aufgabe.config.babystep.value = Boolean.valueOf(element.getElementsByTagName("babysteps").item(0).getAttributes().getNamedItem("value").getTextContent());
+                    aufgabe.config.babystep.value = element.getElementsByTagName("babysteps").item(0).getAttributes().getNamedItem("value").getTextContent();
+                    aufgabe.config.babystep.time = Integer.valueOf(element.getElementsByTagName("babystepTime").item(0).getAttributes().getNamedItem("value").getTextContent());
                     aufgabe.config.timetracking = Boolean.valueOf(element.getElementsByTagName("timetracking").item(0).getAttributes().getNamedItem("value").getTextContent());
                 }
                 katalog.add(i,aufgabe);

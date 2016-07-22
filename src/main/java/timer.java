@@ -1,5 +1,3 @@
-package Time;
-
 /**
  * Created by Felix Kerlin on 6/28/2016.
  * Multithreading from http://www.tutorialspoint.com/java/java_multithreading.htm
