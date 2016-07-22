@@ -68,6 +68,7 @@ public class LoadController implements Initializable{       //Design des FXML mu
         }
         Main.tcontroller.babytime = babyTime;
         Main.tcontroller.timetracking = Timetracking;
+        Main.tcontroller.backup = test;
         Main.self.statusBar.output.setText("Loaded new Template...");
     }
 }

@@ -25,7 +25,6 @@ import java.util.regex.Pattern;
 public class TDDTController implements Initializable{
     private boolean testMode = true;
     private boolean refactor = false;
-    //****** Timetracking and Babysteps must be implemented by Felix
     public boolean babysteps = false;
     public int babytime = 0;
     public boolean timetracking = false;
@@ -45,6 +44,8 @@ public class TDDTController implements Initializable{
     public static TDDTController self;
     public babyTimer timer;
     public Label babystepCounter;
+    String backup = "";
+    boolean greenBackup;
 
     String tempCode = "";
 
@@ -128,6 +129,8 @@ public class TDDTController implements Initializable{
             testMode = true;
             setLabel(status,"TESTMODE",Color.RED);
             refactor = false;
+            backup = fieldred.getText();
+            greenBackup = false;
         }else {
             if (testMode) { //&& !result.hasErrors
                 //Switching to Code
@@ -136,6 +139,8 @@ public class TDDTController implements Initializable{
                 testMode = false;
                 setLabel(status, "CODEMODE", Color.GREEN);
                 tempCode = getLeftTextArea();
+                backup = fieldgreen.getText();
+                greenBackup = true;
             } else {
                 if (result.hasErrors) {   //RESETET Code falls Error  und Switch back
                     setLeftTextArea(tempCode);
@@ -143,9 +148,13 @@ public class TDDTController implements Initializable{
                     fieldred.setEditable(true);
                     testMode = true;
                     setLabel(status, "TESTMODE", Color.RED);
+                    backup = fieldred.getText();
+                    greenBackup = false;
                 } else if (result.hasErrors == false) {
                     refactor = true;
                     setLabel(status, "REFACTORING", Color.BLACK);
+                    backup = fieldgreen.getText();
+                    greenBackup = true;
                 }
             }
         }
@@ -165,8 +174,14 @@ public class TDDTController implements Initializable{
         }
     }
 
+    public void revert(){
+        if (greenBackup) fieldgreen.replaceText(backup);
+        else fieldred.replaceText(backup);
+        checkBabysteps();
+    }
+
     public void timeOver(){
-        //do revert
+        revert();
     }
 
     //-----API----------------------------
