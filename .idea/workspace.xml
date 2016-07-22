@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fbfe817-59b6-4652-9f26-1396f77c6dbf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trackingTimer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Fensterdesigns/Chart.class" afterPath="$PROJECT_DIR$/build/classes/main/Fensterdesigns/Chart.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/LoadController.class" afterPath="$PROJECT_DIR$/build/classes/main/LoadController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/TDDTController.class" afterPath="$PROJECT_DIR$/build/classes/main/TDDTController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java" afterPath="$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/LoadController.java" afterPath="$PROJECT_DIR$/src/main/java/LoadController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TDDTController.java" afterPath="$PROJECT_DIR$/src/main/java/TDDTController.java" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
@@ -40,13 +37,11 @@
       <file leaf-file-name="TDDTController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/TDDTController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="967">
-              <caret line="197" column="25" selection-start-line="197" selection-start-column="25" selection-end-line="197" selection-end-column="25" />
+            <state relative-caret-position="471">
+              <caret line="204" column="4" selection-start-line="204" selection-start-column="4" selection-end-line="204" selection-end-column="4" />
               <folding>
                 <element signature="e#7327#7328#0" expanded="true" />
                 <element signature="e#7351#7352#0" expanded="true" />
-                <element signature="e#7662#7663#0" expanded="true" />
-                <element signature="e#7711#7712#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -942,7 +937,14 @@
       <option name="project" value="LOCAL" />
       <updated>1469185779563</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="timetracking works now">
+      <created>1469186596063</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1469186596063</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -992,7 +994,8 @@
     <MESSAGE value="fixed several bugs" />
     <MESSAGE value="babysteps now revert" />
     <MESSAGE value="added revert button" />
-    <option name="LAST_COMMIT_MESSAGE" value="added revert button" />
+    <MESSAGE value="timetracking works now" />
+    <option name="LAST_COMMIT_MESSAGE" value="timetracking works now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1350,13 +1353,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TDDTController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="967">
-          <caret line="197" column="25" selection-start-line="197" selection-start-column="25" selection-end-line="197" selection-end-column="25" />
+        <state relative-caret-position="471">
+          <caret line="204" column="4" selection-start-line="204" selection-start-column="4" selection-end-line="204" selection-end-column="4" />
           <folding>
             <element signature="e#7327#7328#0" expanded="true" />
             <element signature="e#7351#7352#0" expanded="true" />
-            <element signature="e#7662#7663#0" expanded="true" />
-            <element signature="e#7711#7712#0" expanded="true" />
           </folding>
         </state>
       </provider>

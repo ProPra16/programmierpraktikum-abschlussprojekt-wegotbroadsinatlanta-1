@@ -202,10 +202,7 @@ public class TDDTController implements Initializable{
         if (ttimer != null) ttimer.stop();
         if (timetracking == true) ttimer = new trackingTimer();
     }
-
-    public void stopTracking(){
-        if (ttimer != null) ttimer.stop();
-    }
+    
     //-----API----------------------------
     public void setLeftTextArea(String s){fieldgreen.replaceText(s);}
     public void setRightTextArea(String s){
