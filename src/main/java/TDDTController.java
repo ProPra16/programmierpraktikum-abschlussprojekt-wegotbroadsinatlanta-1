@@ -43,12 +43,17 @@ public class TDDTController implements Initializable{
 
     public static TDDTController self;
     public babyTimer timer;
+    public trackingTimer ttimer;
     public Label babystepCounter;
 
     @FXML
     public Button revertButton;
     String backup = "";
     boolean greenBackup;
+
+    int redStat;
+    int greenStat;
+    int blackStat;
 
     String tempCode = "";
 
@@ -80,9 +85,9 @@ public class TDDTController implements Initializable{
 
     public void startStatistik(){               /////// Anmerkung:::: FELIX Statistik Daten von Babystep und Timetracking bitte einfügen
         DEBUG.out("Launch startistic");
-        double red = 0.4;       ///Hier einfügen
-        double green = 0.6;
-        double oragne = 0.2;
+        double red = redStat;       ///Hier einfügen
+        double green = greenStat;
+        double oragne = blackStat;
         Stage statistik = new Stage();
         statistik.setTitle("Andranischer Graph");
         FinalWindow ds = new FinalWindow();
@@ -187,6 +192,20 @@ public class TDDTController implements Initializable{
         revert();
     }
 
+    public void track(){
+        if (refactor) blackStat++;
+        else if (testMode) redStat++;
+        else greenStat++;
+    }
+
+    public void startTracking(){
+        if (ttimer != null) ttimer.stop();
+        if (timetracking == true) ttimer = new trackingTimer();
+    }
+
+    public void stopTracking(){
+        if (ttimer != null) ttimer.stop();
+    }
     //-----API----------------------------
     public void setLeftTextArea(String s){fieldgreen.replaceText(s);}
     public void setRightTextArea(String s){

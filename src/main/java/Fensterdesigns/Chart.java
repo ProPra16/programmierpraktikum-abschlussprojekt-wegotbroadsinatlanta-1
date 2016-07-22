@@ -1,5 +1,6 @@
 package Fensterdesigns;
 
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
@@ -43,6 +44,7 @@ public class Chart {
         XYChart.Series se3 = new XYChart.Series();
         se3.setName("Refactor");
         se3.getData().add(new XYChart.Data(bereich, refacprozent));
+
         // HBox h = new HBox();
         values.getData().addAll(se1, se2, se3);
     }
