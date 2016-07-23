@@ -48,7 +48,7 @@ public void testSomething(){
 }</test></tests>
         <config>
             <babysteps value="True"/>
-            <babystepTime value="30"/>
+            <babystepTime value="120"/>
             <timetracking value="True" />
         </config>
     </excercise>

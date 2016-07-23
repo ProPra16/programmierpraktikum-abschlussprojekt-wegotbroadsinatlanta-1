@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fbfe817-59b6-4652-9f26-1396f77c6dbf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/TDDTController.class" afterPath="$PROJECT_DIR$/build/classes/main/TDDTController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/sample.fxml" afterPath="$PROJECT_DIR$/build/resources/main/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TDDTController.java" afterPath="$PROJECT_DIR$/src/main/java/TDDTController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sample.fxml" afterPath="$PROJECT_DIR$/src/main/resources/sample.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalogback.xml" afterPath="$PROJECT_DIR$/catalogback.xml" />
     </list>
     <ignored path="wegotbroadsinatlanta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="TDDTController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TDDTController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TDDTController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
               <caret line="189" column="46" selection-start-line="189" selection-start-column="46" selection-end-line="189" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="catalogback.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/catalogback.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="592">
+              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -97,16 +104,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="925">
               <caret line="45" column="67" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fenster.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Fensterdesigns/Fenster.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -456,13 +453,13 @@
         <option value="$PROJECT_DIR$/src/main/java/babyTimer.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/BabystepConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/FileIO/Einlesen.java" />
-        <option value="$PROJECT_DIR$/catalogback.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mainstyle.css" />
         <option value="$PROJECT_DIR$/src/main/java/Fensterdesigns/Chart.java" />
         <option value="$PROJECT_DIR$/src/main/java/trackingTimer.java" />
         <option value="$PROJECT_DIR$/src/main/java/LoadController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sample.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/TDDTController.java" />
+        <option value="$PROJECT_DIR$/catalogback.xml" />
       </list>
     </option>
   </component>
@@ -941,7 +938,14 @@
       <option name="project" value="LOCAL" />
       <updated>1469186596063</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="abfragen für phasenwechsel sollten stimmen&#10;revert setzt in grün auf rot zurück sonst bleibt es in der phase">
+      <created>1469265966333</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1469265966333</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -992,7 +996,8 @@
     <MESSAGE value="babysteps now revert" />
     <MESSAGE value="added revert button" />
     <MESSAGE value="timetracking works now" />
-    <option name="LAST_COMMIT_MESSAGE" value="timetracking works now" />
+    <MESSAGE value="abfragen für phasenwechsel sollten stimmen&#10;revert setzt in grün auf rot zurück sonst bleibt es in der phase" />
+    <option name="LAST_COMMIT_MESSAGE" value="abfragen für phasenwechsel sollten stimmen&#10;revert setzt in grün auf rot zurück sonst bleibt es in der phase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1272,14 +1277,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalogback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/settings.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1400,6 +1397,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="189" column="46" selection-start-line="189" selection-start-column="46" selection-end-line="189" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
           <folding />
         </state>
       </provider>
