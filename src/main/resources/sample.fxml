@@ -13,7 +13,7 @@
     <Label fx:id="status" GridPane.columnIndex="1" GridPane.rowIndex="0" Text="STATUS" />
         <HBox GridPane.columnIndex="2" GridPane.rowIndex="0" alignment="BASELINE_RIGHT" spacing="10">
             <Label fx:id="babystepCounter" Text="Babysteps nicht aktiviert"/>
-            <Button fx:id="revertButton" Text = "Revert" onAction="#revert" textFill="black"/>
+            <Button fx:id="revertButton" Text = "Revert" onAction="#reset" textFill="black"/>
             <Label fx:id="errorcounter" Text="Fehler in Tests:"/>
             <Button fx:id="runbutton" onAction="#run"/>
             <Button fx:id="switchbutton" onAction="#switchField"/>

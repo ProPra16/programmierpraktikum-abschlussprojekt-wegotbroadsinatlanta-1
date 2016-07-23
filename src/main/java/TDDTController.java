@@ -59,6 +59,7 @@ public class TDDTController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        testMode = true;
         if(testMode){
             setLabel(status,"TESTMODE",Color.RED);
             fieldgreen.setEditable(false);
@@ -106,29 +107,29 @@ public class TDDTController implements Initializable{
         DEBUG.out("Found Classname: "+ classname);
         return classname;
     }
+
     public void run(){
         Compile Compile = new Compile();
         try{
-            if(testMode){
-                //TestClassCompilen
-                CompilationResult result = Compile.compileCodeandTest(findClassName(getLeftTextArea()),getLeftTextArea(),false,findClassName(getRightTextArea()),getRightTextArea(),true);
-                //Check for Failing Test or not compiling <code></code>
-                DEBUG.out(String.valueOf(result.numberOfFailedTest));
-                if(result.numberOfFailedTest>0 || result.hasErrors == true){ // or haserrors == true
+            CompilationResult result = Compile.compileCodeandTest(findClassName(getLeftTextArea()),getLeftTextArea(),false,findClassName(getRightTextArea()),getRightTextArea(),true);
+            if (testMode) {
+                if (result.numberOfFailedTest == 1 || result.hasErrors == true) {
                     switchbutton.setDisable(false);
-                    //set switchbutton color greeen !!!!
                 }
-            }else{
-                //MainCodeCompilen
-                CompilationResult result = Compile.compileCode(findClassName(getLeftTextArea()),getLeftTextArea(),false);
+            } else {
+                if (result.hasErrors == false && result.numberOfFailedTest == 0) {
+                    switchbutton.setDisable(false);
+                }
             }
         }catch(Exception e){DEBUG.out("Error in Compilation");Main.self.statusBar.output.setText("Error in Compilation");e.printStackTrace();}
-        errorcounter.setText("Fehler in Tests: " + result.numberOfFailedTest);
+        if (result.numberOfFailedTest >= 0) errorcounter.setText("Fehler in Tests: " + result.numberOfFailedTest);
+        else errorcounter.setText("Fehler beim Kompilieren");
         Main.self.statusBar.output.setText(result.outmessage);
         if(result.hasErrors){ Main.self.statusBar.output.setTextFill(Color.web("#FF6B68"));}else{Main.self.statusBar.output.setTextFill(Color.web("#e3e3e3"));}
     }
 
     public void switchField(){
+        switchbutton.setDisable(true);
         CompilationResult result = Compile.compileCodeandTest(findClassName(getLeftTextArea()),getLeftTextArea(),false,findClassName(getRightTextArea()),getRightTextArea(),true);
         errorcounter.setText("Fehler in Tests: " + result.numberOfFailedTest);
         if(refactor && !result.hasErrors){
@@ -182,14 +183,27 @@ public class TDDTController implements Initializable{
         }
     }
 
-    public void revert(){
-        if (greenBackup) fieldgreen.replaceText(backup);
-        else fieldred.replaceText(backup);
+    public void revert(boolean back){
+        if (!refactor) {
+            if (greenBackup) {
+                fieldgreen.replaceText(backup);
+                fieldgreen.setEditable(false);
+                fieldred.setEditable(true);
+                testMode = true;
+                setLabel(status, "TESTMODE", Color.RED);
+                backup = fieldred.getText();
+                greenBackup = false;
+            }
+            else fieldred.replaceText(backup);
+        } else {
+            fieldgreen.replaceText(backup);
+        }
         checkBabysteps();
     }
 
+    public void reset() { revert(true); }
     public void timeOver(){
-        revert();
+        revert(false);
     }
 
     public void track(){
